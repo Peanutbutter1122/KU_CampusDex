@@ -1,13 +1,14 @@
 import 'package:final_project/login_page.dart';
 import 'package:final_project/signup_page.dart';
 import 'package:flutter/material.dart';
-import 'package:final_project/home.dart';
+import 'package:final_project/home_page.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
 import 'screens/main_screen.dart';
+
 
 
 void main() async{
@@ -40,11 +41,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     
-    initialRoute: '/login_page', 
+    initialRoute: '/home_page', 
       routes: {
         '/login_page': (context) => LoginPage(),
         '/signup_page': (context) => SignupPage(),
-        '/home': (context) => const HomePage(), 
+        '/home_page': (context) =>  HomePage(), 
+
+        
       }
     );
   }
