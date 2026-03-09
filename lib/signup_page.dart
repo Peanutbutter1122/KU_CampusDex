@@ -1,10 +1,8 @@
 import 'package:final_project/components/button_comp.dart';
 import 'package:final_project/components/textfield_comp.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:email_validator/email_validator.dart';
 
 class SignupPage extends StatefulWidget {
@@ -25,6 +23,7 @@ class _SignupPageState extends State<SignupPage> {
   final emailController = TextEditingController();
   String? emailError;
   String? passwordError;
+  String? usernameError;
 
   // dispose เพื่อป้องกัน memory leak
   @override
@@ -38,44 +37,62 @@ class _SignupPageState extends State<SignupPage> {
 
   void signUserUp() async{
     setState(() {
-    if(emailController.text.isEmpty){
-      emailError = "Please enter your email";
-    }
-    else if(!EmailValidator.validate(emailController.text.trim())){
-      emailError = "Wrong email format(ex. name@email.com)";
-    }else{
-      emailError = null;
-    }
+
+    usernameError = null;
+    emailError = null;
+    passwordError = null;
+
+    final username = usernameController.text.trim();
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+    final confirmPassword = confirmPasswordController.text.trim();
 
 
-    if(passwordController.text !=  confirmPasswordController.text){
+    if (username.isEmpty) {
+      usernameError = 'Please enter username';
+    } else if (username.length < 4) {
+      usernameError = 'Username must be at least 4 letters.';
+    }
+
+    if (email.isEmpty) {
+      emailError = 'Please enter your email';
+    } else if (!EmailValidator.validate(email)) {
+      emailError = 'Wrong email format (ex. name@email.com)';
+    }
+
+    if (password.isEmpty || confirmPassword.isEmpty) {
+      passwordError = 'Please enter password and confirm password';
+    } else if (password.length < 6) {
+      passwordError = 'Password need to be at least 6 letters.';
+    } else if (password != confirmPassword) {
       passwordError = "Password doesn't match!";
     }
-    else if(passwordController.text.length < 6){
-      passwordError = "Password need to be at least 6 letters.";
-    }
-    else{
-      passwordError = null;
-    }
+  });
+
+  if (usernameError != null || emailError != null || passwordError != null) return;
+
+
+  try {
+    final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: emailController.text.trim(),
+      password: passwordController.text.trim(),
+    );
+
+    await userCredential.user?.updateDisplayName(usernameController.text.trim());
+
+    if (!mounted) return;
+    Navigator.pushReplacementNamed(context, '/login_page');
+  } on FirebaseAuthException catch (e) {
+    setState(() {
+      if (e.code == 'email-already-in-use') {
+        emailError = 'This email is already in use';
+      } else if (e.code == 'weak-password') {
+        passwordError = 'Password is too weak';
+      } else {
+        passwordError = e.message;
+      }
     });
-    
-    if (passwordError == null && emailError == null){
-      try{
-        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailController.text.trim(),
-        password: passwordController.text.trim(),
-      );
-
-      await userCredential.user!.updateDisplayName(usernameController.text.trim());
-
-        if (mounted) Navigator.pushReplacementNamed(context, '/home');
-
-      } on FirebaseAuthException catch (e){
-        setState(() {
-          passwordError = e.message;
-        });
-      };
-    }
+  } 
   }
 
   @override
@@ -125,6 +142,7 @@ class _SignupPageState extends State<SignupPage> {
                   controller: usernameController,
                   hintText: 'Username',
                   isPassword: false,
+                  errorText: usernameError,
           
                 ),
                 const SizedBox(height: 30,),
@@ -170,7 +188,7 @@ class _SignupPageState extends State<SignupPage> {
           
                 SizedBox(height: 30,),
           
-                //signin button
+                //signup button
                 ButtonComp(
                   onTap: ()=> signUserUp(),
                   text: 'Sign Up',
@@ -230,7 +248,7 @@ class _SignupPageState extends State<SignupPage> {
                     clientId: "95080321614-hv8qvfp9hsmkor8a1ro596rcpfjq33me.apps.googleusercontent.com", 
                     loadingIndicator: const CircularProgressIndicator(), // แสดงตัวหมุนขณะโหลด
                     onSignedIn: (userCredential) {
-                      Navigator.pushReplacementNamed(context, '/login_page');
+                      Navigator.pushReplacementNamed(context, '/home_page');
                     },
                   ),
                 ),

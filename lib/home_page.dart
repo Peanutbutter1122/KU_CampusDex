@@ -4,6 +4,7 @@ import 'package:final_project/components/showimage_home.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project/gallery.dart';
 import 'package:final_project/badge.dart';
+import 'package:final_project/widgets/top_status_bar.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -33,7 +34,16 @@ class _HomePageState extends State<HomePage> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 25),
+            Container(
+              width: double.infinity,
+              color: const Color(0xFF358C46),
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).padding.top + 16,
+                bottom: 20,
+              ),
+              child: const TopStatusBar(),
+            ),
+            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text('สถานที่แนะนำ', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
@@ -64,6 +74,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final String appBarTitle = _selectedIndex == 2
+        ? 'BADGE'
+        : _selectedIndex == 0
+        ? 'GALLERY'
+        : 'KU CAMPUS DEX';
+    final IconData? appBarIcon = _selectedIndex == 1 ? Icons.school : null;
 
     final List<Widget> _pages = [
       const GalleryPage(),   // index 0
@@ -74,20 +90,20 @@ class _HomePageState extends State<HomePage> {
 
       extendBody: true,
 
-      appBar: AppBar(
+      appBar: _selectedIndex == 1 ? null : AppBar(
         toolbarHeight: (100),
         backgroundColor: Colors.green,
         centerTitle: true,
-        title: Row(// กรอบดำ
+        title: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(Icons.school, size: 40, color: Colors.black), 
-          const SizedBox(width: 10),
+          if (appBarIcon != null) Icon(appBarIcon, size: 40, color: Colors.black),
+          if (appBarIcon != null) const SizedBox(width: 10),
 
           Stack(
             children: [
           Text(
-          'KU CAMPUS DEX',
+          appBarTitle, // กรอบดำ
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900,
@@ -98,7 +114,7 @@ class _HomePageState extends State<HomePage> {
               ..color = Colors.black,
           ),),
         Text(
-      'KU CAMPUS DEX',
+      appBarTitle,
       style: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.w900,
