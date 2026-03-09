@@ -30,16 +30,17 @@ class _LoginPageState extends State<LoginPage> {
 
   void signUserIn() async{
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final cred = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      if (mounted) Navigator.pushReplacementNamed(context, '/home');
+      
+      if (!mounted) return;
+      Navigator.pushReplacementNamed(context, '/home_page');
     } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message; 
-      });
-    }
+
+      setState(() => errorMessage = e.message);
+    } 
   }
 
   @override
@@ -122,6 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                   text: 'Sign In',
                 ),
                 const SizedBox(height: 15,),
+                
           
                 //goto signup
                 Padding(
@@ -176,7 +178,7 @@ class _LoginPageState extends State<LoginPage> {
                       clientId: "95080321614-hv8qvfp9hsmkor8a1ro596rcpfjq33me.apps.googleusercontent.com", 
                       loadingIndicator: const CircularProgressIndicator(), // แสดงตัวหมุนขณะโหลด
                       onSignedIn: (userCredential) {
-                        Navigator.pushReplacementNamed(context, '/home');
+                        Navigator.pushReplacementNamed(context, '/home_page');
                       },
                     ),
                   ),
