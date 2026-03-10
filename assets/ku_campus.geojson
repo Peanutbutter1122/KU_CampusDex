@@ -1,0 +1,6557 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56994,
+          13.855748
+        ]
+      },
+      "properties": {
+        "id": "KU_001",
+        "name": "อาคารเรียนและปฏิบัติการ คณะสิ่งแวดล้อม",
+        "affiliation": "คณะสิ่งแวดล้อม",
+        "year_built": 2555,
+        "floors": 6,
+        "area_sqm": 4311.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569128,
+          13.855541
+        ]
+      },
+      "properties": {
+        "id": "KU_002",
+        "name": "อาคารปฏิบัติการ Wet Lab (อาคารจินดาเทียมเมธ)",
+        "affiliation": "คณะประมง",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 937.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569717,
+          13.855478
+        ]
+      },
+      "properties": {
+        "id": "KU_003",
+        "name": "อาคารโรงงานต้นแบบอาหารสัตว์น้ำ",
+        "affiliation": "คณะประมง",
+        "year_built": 2542,
+        "floors": 1,
+        "area_sqm": 397.26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569106,
+          13.855216
+        ]
+      },
+      "properties": {
+        "id": "KU_004",
+        "name": "อาคารปฎิบัติการ คณะประมง (อาคารบุญอินทรัมพรรย์)",
+        "affiliation": "คณะประมง",
+        "year_built": 2546,
+        "floors": 8,
+        "area_sqm": 8668.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569653,
+          13.855119
+        ]
+      },
+      "properties": {
+        "id": "KU_005",
+        "name": "อาคารปฏิบัติการแปรรูปสัตว์น้ำ (อาคารทัศนีสรสุชาติ)",
+        "affiliation": "คณะประมง",
+        "year_built": 2542,
+        "floors": 2,
+        "area_sqm": 1383.55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569997,
+          13.854973
+        ]
+      },
+      "properties": {
+        "id": "KU_006",
+        "name": "อาคารบำบัดน้ำเสีย มก.",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2522,
+        "floors": 3,
+        "area_sqm": 202.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567928,
+          13.855579
+        ]
+      },
+      "properties": {
+        "id": "KU_007",
+        "name": "โรงเรือนทดลอง 1",
+        "affiliation": "คณะประมง",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 212.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568181,
+          13.855601
+        ]
+      },
+      "properties": {
+        "id": "KU_008",
+        "name": "โรงเรือนทดลอง 2",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 212.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568164,
+          13.855521
+        ]
+      },
+      "properties": {
+        "id": "KU_009",
+        "name": "โรงเรือนทดลอง 6 (เปลี่ยนชื่อจาก บ่อคอนกรีต 4)",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 54.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567821,
+          13.855488
+        ]
+      },
+      "properties": {
+        "id": "KU_010",
+        "name": "โรงเรือนทดลอง 4 (เปลี่ยนชื่อจาก บ่อคอนกรีต 1)",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 86.36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567919,
+          13.855489
+        ]
+      },
+      "properties": {
+        "id": "KU_011",
+        "name": "โรงเรือนทดลอง 5 (เปลี่ยนชื่อจากบ่อคอนกรีต 2)",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 25.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567974,
+          13.855459
+        ]
+      },
+      "properties": {
+        "id": "KU_012",
+        "name": "บ่อคอนกรีต 3",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 0,
+        "area_sqm": 35.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568008,
+          13.855451
+        ]
+      },
+      "properties": {
+        "id": "KU_013",
+        "name": "โรงเรือนทดลอง 3",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 119.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56756,
+          13.855444
+        ]
+      },
+      "properties": {
+        "id": "KU_014",
+        "name": "โรงปฏิบัติการอาหารสัตวน้ำ",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 265.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567855,
+          13.855388
+        ]
+      },
+      "properties": {
+        "id": "KU_015",
+        "name": "เรือนปฏิบัติการสุขภาพสัตวน้ำ",
+        "affiliation": "คณะประมง",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 154.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568075,
+          13.855351
+        ]
+      },
+      "properties": {
+        "id": "KU_016",
+        "name": "โรงเรือนปฏิบัติการเพาะฟักและอนุบาลสัตว์น้ำกร่อย",
+        "affiliation": "คณะประมง",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 160.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568339,
+          13.855298
+        ]
+      },
+      "properties": {
+        "id": "KU_017",
+        "name": "อาคารวลัยลักษณ์",
+        "affiliation": "คณะประมง",
+        "year_built": 2522,
+        "floors": 1,
+        "area_sqm": 230.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567343,
+          13.855345
+        ]
+      },
+      "properties": {
+        "id": "KU_018",
+        "name": "บ่อคอนกรีตกลม (12 บ่อ)",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 0,
+        "area_sqm": 245.16
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566867,
+          13.855089
+        ]
+      },
+      "properties": {
+        "id": "KU_019",
+        "name": "อาคารปฎิบัติการเพาะฟักและอนุบาลสัตว์น้ำจืด",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 506.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566842,
+          13.854791
+        ]
+      },
+      "properties": {
+        "id": "KU_020",
+        "name": "อาคารปฏิบัติการคุณภาพน้ำ",
+        "affiliation": "คณะประมง",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 177.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567184,
+          13.8549
+        ]
+      },
+      "properties": {
+        "id": "KU_021",
+        "name": "อาคารภาควิชาเพาะเลี้ยงสัตวน้ำและภาควิชาการจัดการประมง (อาคารเมฆบุญพรามหมณ์)",
+        "affiliation": "คณะประมง",
+        "year_built": 2533,
+        "floors": 2,
+        "area_sqm": 1797.45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567216,
+          13.854502
+        ]
+      },
+      "properties": {
+        "id": "KU_022",
+        "name": "อาคารภาควิชาวิทยาศาสตร์ทางทะเล",
+        "affiliation": "คณะประมง",
+        "year_built": 2533,
+        "floors": 3,
+        "area_sqm": 1544.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567651,
+          13.855042
+        ]
+      },
+      "properties": {
+        "id": "KU_023",
+        "name": "อาคารพิพิธภัณฑ์ธรรมชาติวิทยาประมง (อาคารโชติสุวัตถิ)",
+        "affiliation": "คณะประมง",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 539.65
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568752,
+          13.854739
+        ]
+      },
+      "properties": {
+        "id": "KU_024",
+        "name": "บ่อดินเก็บน้ำ 8",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 10276.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567681,
+          13.854548
+        ]
+      },
+      "properties": {
+        "id": "KU_025",
+        "name": "บ่อดินทดลอง 1",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567926,
+          13.854488
+        ]
+      },
+      "properties": {
+        "id": "KU_026",
+        "name": "บ่อดินทดลอง 2",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568165,
+          13.854438
+        ]
+      },
+      "properties": {
+        "id": "KU_027",
+        "name": "บ่อดินทดลอง 3",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5684,
+          13.854379
+        ]
+      },
+      "properties": {
+        "id": "KU_028",
+        "name": "บ่อดินทดลอง 4",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568633,
+          13.854328
+        ]
+      },
+      "properties": {
+        "id": "KU_029",
+        "name": "บ่อดินทดลอง 5",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568865,
+          13.854279
+        ]
+      },
+      "properties": {
+        "id": "KU_030",
+        "name": "บ่อดินทดลอง 6",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569106,
+          13.854229
+        ]
+      },
+      "properties": {
+        "id": "KU_031",
+        "name": "บ่อดินบำบัดน้ำ 7",
+        "affiliation": "คณะประมง",
+        "year_built": 2516,
+        "floors": 1,
+        "area_sqm": 800.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569589,
+          13.854228
+        ]
+      },
+      "properties": {
+        "id": "KU_032",
+        "name": "ศูนย์ถ่ายทอดเทคโนโลยีปลาสวยงามและพรรณไม้ประดับ",
+        "affiliation": "คณะประมง",
+        "year_built": 2545,
+        "floors": 1,
+        "area_sqm": 619.45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569893,
+          13.854181
+        ]
+      },
+      "properties": {
+        "id": "KU_033",
+        "name": "เรือนเพาะชำไม้น้ำประดับ",
+        "affiliation": "คณะประมง",
+        "year_built": 2545,
+        "floors": 1,
+        "area_sqm": 250.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567793,
+          13.853967
+        ]
+      },
+      "properties": {
+        "id": "KU_034",
+        "name": "อาคารปฎิบัติการพื้นฐานคณะประมง (อาคารสุภาพมงคลประสิทธิ์)",
+        "affiliation": "คณะประมง",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 958.52
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568367,
+          13.853953
+        ]
+      },
+      "properties": {
+        "id": "KU_035",
+        "name": "ศูนย์พัฒนาเทคโนโลยีอาหารสัตว์น้ำ (อาคารวิทย์ธารชลานุกิจ)",
+        "affiliation": "คณะประมง",
+        "year_built": 2540,
+        "floors": 2,
+        "area_sqm": 695.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570678,
+          13.854876
+        ]
+      },
+      "properties": {
+        "id": "KU_036",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 3 (ฟาร์มไก่หลวงสุวรรณวาจกกสิกิจ)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 3,
+        "area_sqm": 946.48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570926,
+          13.854917
+        ]
+      },
+      "properties": {
+        "id": "KU_037",
+        "name": "โรงเก็บปุ๋ยคอก (เปลี่ยนชื่อจาก โรงสำรองไฟฟ้า)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 18.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571346,
+          13.854873
+        ]
+      },
+      "properties": {
+        "id": "KU_038",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 2",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2542,
+        "floors": 2,
+        "area_sqm": 772.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571347,
+          13.854749
+        ]
+      },
+      "properties": {
+        "id": "KU_039",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 1",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 2,
+        "area_sqm": 645.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571916,
+          13.854829
+        ]
+      },
+      "properties": {
+        "id": "KU_040",
+        "name": "อาคารโรงแปรรูปผลิตภัณฑ์/ปฏิบัติการตัวอย่างงานวิจัย",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 105.79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572189,
+          13.854871
+        ]
+      },
+      "properties": {
+        "id": "KU_041",
+        "name": "โรงเก็บอาหารและผสมอาหารสัตว์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 420.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570639,
+          13.854596
+        ]
+      },
+      "properties": {
+        "id": "KU_042",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 4",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2512,
+        "floors": 1,
+        "area_sqm": 476.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570611,
+          13.854452
+        ]
+      },
+      "properties": {
+        "id": "KU_043",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 5",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 234.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571213,
+          13.854448
+        ]
+      },
+      "properties": {
+        "id": "KU_044",
+        "name": "อาคารปฏิบัติการฟักไข่และวิจัย",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 195.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571673,
+          13.854618
+        ]
+      },
+      "properties": {
+        "id": "KU_045",
+        "name": "โรงเรือนวิจัยและพัฒนา 7",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 240.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571669,
+          13.854449
+        ]
+      },
+      "properties": {
+        "id": "KU_046",
+        "name": "อาคารโรงเรือนวิจัยและพัฒนา 6",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 200.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571885,
+          13.85467
+        ]
+      },
+      "properties": {
+        "id": "KU_047",
+        "name": "ห้องน้ำ (ฟาร์มไก่หลวงสุวรรณวาจกกสิกิจ)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 28.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572157,
+          13.854564
+        ]
+      },
+      "properties": {
+        "id": "KU_048",
+        "name": "อาคารที่ทำการ",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 2,
+        "area_sqm": 688.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572375,
+          13.854399
+        ]
+      },
+      "properties": {
+        "id": "KU_049",
+        "name": "ร้านจำหน่ายผลิตภัณฑ์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 49.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570353,
+          13.854163
+        ]
+      },
+      "properties": {
+        "id": "KU_050",
+        "name": "อาคารจอดรถ บางเขน",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2547,
+        "floors": 8,
+        "area_sqm": 5362.97
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570651,
+          13.854055
+        ]
+      },
+      "properties": {
+        "id": "KU_051",
+        "name": "อาคารสโตร์และซ่อมบำรุง",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2541,
+        "floors": 2,
+        "area_sqm": 600.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570906,
+          13.854058
+        ]
+      },
+      "properties": {
+        "id": "KU_052",
+        "name": "โรงงานผลิตทดลอง 2",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2541,
+        "floors": 2,
+        "area_sqm": 899.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571139,
+          13.854099
+        ]
+      },
+      "properties": {
+        "id": "KU_053",
+        "name": "อาคารบอยเลอร์และคลังเก็บวัสดุ",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2542,
+        "floors": 1,
+        "area_sqm": 300.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57113,
+          13.853922
+        ]
+      },
+      "properties": {
+        "id": "KU_054",
+        "name": "คลังน้ำมัน",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 48.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571523,
+          13.854053
+        ]
+      },
+      "properties": {
+        "id": "KU_055",
+        "name": "อาคารโรงงานผลิตทดลอง 1",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2542,
+        "floors": 2,
+        "area_sqm": 1925.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571935,
+          13.854058
+        ]
+      },
+      "properties": {
+        "id": "KU_056",
+        "name": "อาคารเทคโนโลยีการผลิตแบบการผลิตเยื่อกระดาษ",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตผลทางการเกษตรและอุตสาหกรรมเกษตร",
+        "year_built": 2541,
+        "floors": 2,
+        "area_sqm": 943.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572274,
+          13.854052
+        ]
+      },
+      "properties": {
+        "id": "KU_057",
+        "name": "อาคารวิจัยและพัฒนา(สถาบันค้นคว้าและพัฒนาระบบนิเวศเกษตร ชั้น3ห้อง313,316)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2546,
+        "floors": 7,
+        "area_sqm": 53.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567574,
+          13.853713
+        ]
+      },
+      "properties": {
+        "id": "KU_058",
+        "name": "เรือนเก็บวัสดุ",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 168.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567764,
+          13.853602
+        ]
+      },
+      "properties": {
+        "id": "KU_059",
+        "name": "เรือนเก็บพัสดุ (เปลี่ยนชื่อจากเรือนเพาะชำ 9)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 70.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56773,
+          13.853429
+        ]
+      },
+      "properties": {
+        "id": "KU_060",
+        "name": "อาคารโครงการ วิจัยพืชสวน 2",
+        "affiliation": "คณะเกษตร",
+        "year_built": 0,
+        "floors": 1,
+        "area_sqm": 29.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567623,
+          13.853496
+        ]
+      },
+      "properties": {
+        "id": "KU_061",
+        "name": "อาคารวิจัยพืชสวน 1",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 29.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567673,
+          13.853156
+        ]
+      },
+      "properties": {
+        "id": "KU_062",
+        "name": "อาคารเรือนองุ่นปวิณปุณศรี",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2545,
+        "floors": 1,
+        "area_sqm": 313.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568048,
+          13.853578
+        ]
+      },
+      "properties": {
+        "id": "KU_063",
+        "name": "โครงการก่อสร้างอาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโลยี (คณะสถาปัตยกรรมศาสตร์)",
+        "affiliation": "คณะสถาปัตยกรรมศาสตร์",
+        "year_built": 2557,
+        "floors": 9,
+        "area_sqm": 7590.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568538,
+          13.853667
+        ]
+      },
+      "properties": {
+        "id": "KU_064",
+        "name": "อาคารปฏิบัติการเทคโนโลยีทางอาคารสถาปัตยกรรมศาสตร์",
+        "affiliation": "คณะสถาปัตยกรรมศาสตร์",
+        "year_built": 2538,
+        "floors": 5,
+        "area_sqm": 2089.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568358,
+          13.853132
+        ]
+      },
+      "properties": {
+        "id": "KU_065",
+        "name": "อาคารสถาปัตยกรรมศาสตร์",
+        "affiliation": "คณะสถาปัตยกรรมศาสตร์",
+        "year_built": 2539,
+        "floors": 7,
+        "area_sqm": 5498.91
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569164,
+          13.853711
+        ]
+      },
+      "properties": {
+        "id": "KU_066",
+        "name": "เรือนเพาะชำ (หลังอาคารสารนิเทศ 50 ปี)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2548,
+        "floors": 1,
+        "area_sqm": 949.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569955,
+          13.85342
+        ]
+      },
+      "properties": {
+        "id": "KU_067",
+        "name": "อาคารสารนิเทศ 50 ปี (สำนักงานอธิการบดี)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2535,
+        "floors": 11,
+        "area_sqm": 13621.03
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571096,
+          13.853595
+        ]
+      },
+      "properties": {
+        "id": "KU_068",
+        "name": "อาคารอมรภูมิรัตน์",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2543,
+        "floors": 9,
+        "area_sqm": 13563.14
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571715,
+          13.853727
+        ]
+      },
+      "properties": {
+        "id": "KU_069",
+        "name": "โรงจอดรถ (3โรง)",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2544,
+        "floors": 1,
+        "area_sqm": 616.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571889,
+          13.853629
+        ]
+      },
+      "properties": {
+        "id": "KU_070",
+        "name": "อาคารที่ทำการพนักงานขับรถ",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร",
+        "year_built": 2544,
+        "floors": 1,
+        "area_sqm": 22.26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571981,
+          13.853477
+        ]
+      },
+      "properties": {
+        "id": "KU_071",
+        "name": "อาคารปฏิบัติการวิจัยกลาง (ใช้พื้นที่ด้านทิศตะวันตก)",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตผลทางการเกษตรและอุตสาหกรรมเกษตร",
+        "year_built": 2539,
+        "floors": 9,
+        "area_sqm": 4680.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571071,
+          13.853008
+        ]
+      },
+      "properties": {
+        "id": "KU_072",
+        "name": "อาคารวิจัยเทคโนโลยี ทางอุตสาหกรรม (CNC) (อาคาร 18)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2538,
+        "floors": 5,
+        "area_sqm": 5807.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571981,
+          13.852977
+        ]
+      },
+      "properties": {
+        "id": "KU_073",
+        "name": "อาคารอุตสาหกรรมสิ่งทอ อาคาร 3",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2535,
+        "floors": 8,
+        "area_sqm": 9503.36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572343,
+          13.853051
+        ]
+      },
+      "properties": {
+        "id": "KU_074",
+        "name": "สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 1",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตผลทางการเกษตรและอุตสาหกรรมเกษตร",
+        "year_built": 2542,
+        "floors": 1,
+        "area_sqm": 375.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572359,
+          13.852858
+        ]
+      },
+      "properties": {
+        "id": "KU_075",
+        "name": "สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 2",
+        "affiliation": "สถาบันค้นคว้าและพัฒนาผลิตผลทางการเกษตรและอุตสาหกรรมเกษตร",
+        "year_built": 2542,
+        "floors": 1,
+        "area_sqm": 375.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565425,
+          13.853319
+        ]
+      },
+      "properties": {
+        "id": "KU_076",
+        "name": "อาคารวิจัยแมลง",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2530,
+        "floors": 1,
+        "area_sqm": 202.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565468,
+          13.85314
+        ]
+      },
+      "properties": {
+        "id": "KU_077",
+        "name": "โรงเรือนปฏิบัติการ หลังที่ 2",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2522,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565379,
+          13.852957
+        ]
+      },
+      "properties": {
+        "id": "KU_078",
+        "name": "โรงเรือนปฏิบัติการ หลังที่ 1",
+        "affiliation": "คณะเกษตร",
+        "year_built": 0,
+        "floors": 1,
+        "area_sqm": 105.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565616,
+          13.852949
+        ]
+      },
+      "properties": {
+        "id": "KU_079",
+        "name": "อาคารวิจัยกีฏวิทยา",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2512,
+        "floors": 1,
+        "area_sqm": 317.82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56557,
+          13.852772
+        ]
+      },
+      "properties": {
+        "id": "KU_080",
+        "name": "อาคารวิจัยหม่อนไหม",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2530,
+        "floors": 1,
+        "area_sqm": 100.08
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565945,
+          13.852858
+        ]
+      },
+      "properties": {
+        "id": "KU_081",
+        "name": "อาคารกล้วยไม้ ระพี สาคริก",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 422.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565296,
+          13.852697
+        ]
+      },
+      "properties": {
+        "id": "KU_082",
+        "name": "อาคาร biocontrol หลังที่ 2",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2517,
+        "floors": 1,
+        "area_sqm": 144.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565335,
+          13.852463
+        ]
+      },
+      "properties": {
+        "id": "KU_083",
+        "name": "อาคาร biocontrol หลังที่ 1",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2517,
+        "floors": 1,
+        "area_sqm": 239.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56561,
+          13.85235
+        ]
+      },
+      "properties": {
+        "id": "KU_084",
+        "name": "ศาลาพักผ่อน",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 9.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564851,
+          13.852469
+        ]
+      },
+      "properties": {
+        "id": "KU_085",
+        "name": "ห้องน้ำ",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 9.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564838,
+          13.852412
+        ]
+      },
+      "properties": {
+        "id": "KU_086",
+        "name": "ห้องพักคนงาน",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 27.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564963,
+          13.852447
+        ]
+      },
+      "properties": {
+        "id": "KU_087",
+        "name": "โรงเลี้ยงแมลง 1",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 99.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565099,
+          13.852375
+        ]
+      },
+      "properties": {
+        "id": "KU_088",
+        "name": "โรงเลี้ยงแมลง 2",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 99.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565212,
+          13.852224
+        ]
+      },
+      "properties": {
+        "id": "KU_089",
+        "name": "โรงจอดรถ",
+        "affiliation": "ศูนย์วิจัยควบคุมศัตรูพืชโดยชีวินทรีย์แห่งชาติ",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 109.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564724,
+          13.852133
+        ]
+      },
+      "properties": {
+        "id": "KU_090",
+        "name": "โรงรถ กองยานอาคารพาหนะ และสถานที่",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2531,
+        "floors": 1,
+        "area_sqm": 88.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564835,
+          13.851919
+        ]
+      },
+      "properties": {
+        "id": "KU_091",
+        "name": "อาคารโรงบริการยานพาหนะ",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2522,
+        "floors": 1,
+        "area_sqm": 881.28
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564699,
+          13.851637
+        ]
+      },
+      "properties": {
+        "id": "KU_092",
+        "name": "อาคารโรงบริการยานพาหนะ (โรงซ่อมครุภัณฑ์)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2522,
+        "floors": 1,
+        "area_sqm": 752.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564422,
+          13.851368
+        ]
+      },
+      "properties": {
+        "id": "KU_093",
+        "name": "อาคารจอดรถวิภาวดีรังสิต",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2554,
+        "floors": 5,
+        "area_sqm": 5779.58
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564071,
+          13.850915
+        ]
+      },
+      "properties": {
+        "id": "KU_094",
+        "name": "อาคารคณะสิิ่งแวดล้อม",
+        "affiliation": "คณะสิ่งแวดล้อม",
+        "year_built": 2522,
+        "floors": 3,
+        "area_sqm": 537.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564222,
+          13.850672
+        ]
+      },
+      "properties": {
+        "id": "KU_095",
+        "name": "อาคารฝ่ายช่าง",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 440.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564138,
+          13.850446
+        ]
+      },
+      "properties": {
+        "id": "KU_096",
+        "name": "เรือนเพาะชำ 4",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 160.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564325,
+          13.850449
+        ]
+      },
+      "properties": {
+        "id": "KU_097",
+        "name": "เรือนเพาะชำ 3",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 160.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563983,
+          13.850385
+        ]
+      },
+      "properties": {
+        "id": "KU_098",
+        "name": "เรือนเพาะชำ (เปลี่ยนชื่อจากเรือนตาก)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 268.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564323,
+          13.850349
+        ]
+      },
+      "properties": {
+        "id": "KU_099",
+        "name": "เรือนเพาะชำ 8",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 208.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564262,
+          13.850145
+        ]
+      },
+      "properties": {
+        "id": "KU_100",
+        "name": "เรือนเพาะชำ 5",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 108.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563638,
+          13.849908
+        ]
+      },
+      "properties": {
+        "id": "KU_101",
+        "name": "เรือนเพาะชำ 2",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 160.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563742,
+          13.849836
+        ]
+      },
+      "properties": {
+        "id": "KU_102",
+        "name": "เรือนเพาะชำ 1",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 160.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56358,
+          13.849723
+        ]
+      },
+      "properties": {
+        "id": "KU_103",
+        "name": "อาคารปฏิบัติการ",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 174.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563985,
+          13.849841
+        ]
+      },
+      "properties": {
+        "id": "KU_104",
+        "name": "เรือนเพาะชำ 6",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 108.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564069,
+          13.849797
+        ]
+      },
+      "properties": {
+        "id": "KU_105",
+        "name": "เรือนเพาะชำ 7",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563901,
+          13.849607
+        ]
+      },
+      "properties": {
+        "id": "KU_106",
+        "name": "อาคารเรียน",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 234.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563752,
+          13.849199
+        ]
+      },
+      "properties": {
+        "id": "KU_107",
+        "name": "ตึกชวนชม",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2510,
+        "floors": 5,
+        "area_sqm": 2222.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.563489,
+          13.848732
+        ]
+      },
+      "properties": {
+        "id": "KU_108",
+        "name": "ตึกชงโค",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2510,
+        "floors": 5,
+        "area_sqm": 2222.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.562736,
+          13.848033
+        ]
+      },
+      "properties": {
+        "id": "KU_109",
+        "name": "อาคารกฤษณา ชุติมา (ภาควิชาเคมี)",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2516,
+        "floors": 6,
+        "area_sqm": 6555.33
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566199,
+          13.852032
+        ]
+      },
+      "properties": {
+        "id": "KU_110",
+        "name": "สนามซอฟ์บอล",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2535,
+        "floors": 0,
+        "area_sqm": 3793.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565807,
+          13.851236
+        ]
+      },
+      "properties": {
+        "id": "KU_111",
+        "name": "อัฒจันทร์ สนามฮอกกี้",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 796.63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566154,
+          13.851225
+        ]
+      },
+      "properties": {
+        "id": "KU_112",
+        "name": "สนามฮอกกี้",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2540,
+        "floors": 0,
+        "area_sqm": 5118.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566306,
+          13.850664
+        ]
+      },
+      "properties": {
+        "id": "KU_113",
+        "name": "อาคารศูนย์วิจัยและพัฒนาวิทยาศาสตร์การกีฬา",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 183.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566747,
+          13.852421
+        ]
+      },
+      "properties": {
+        "id": "KU_114",
+        "name": "อาคารเกษตร",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2544,
+        "floors": 2,
+        "area_sqm": 794.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566789,
+          13.852184
+        ]
+      },
+      "properties": {
+        "id": "KU_115",
+        "name": "อาคารฝึกปฏิบัติงาน",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2520,
+        "floors": 3,
+        "area_sqm": 1834.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56763,
+          13.8525
+        ]
+      },
+      "properties": {
+        "id": "KU_116",
+        "name": "อาคาร 6 (อาคารศึกษานักเรียนมัธยมศึกษา)",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2518,
+        "floors": 6,
+        "area_sqm": 4067.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56848,
+          13.852269
+        ]
+      },
+      "properties": {
+        "id": "KU_117",
+        "name": "อาคารคณะศึกษาศาสตร์เฉลิมพระเกียรติ 6 รอบพระชนมพรรษา",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2540,
+        "floors": 10,
+        "area_sqm": 14579.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566765,
+          13.851676
+        ]
+      },
+      "properties": {
+        "id": "KU_118",
+        "name": "อาคารการส่งเสริม พลานามัยและการกีฬา",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2536,
+        "floors": 2,
+        "area_sqm": 3368.37
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566728,
+          13.851183
+        ]
+      },
+      "properties": {
+        "id": "KU_119",
+        "name": "สนามเทนนิส",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2536,
+        "floors": 0,
+        "area_sqm": 1930.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566744,
+          13.850832
+        ]
+      },
+      "properties": {
+        "id": "KU_120",
+        "name": "สนามบาสเกตบอล",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2537,
+        "floors": 0,
+        "area_sqm": 1498.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567613,
+          13.851917
+        ]
+      },
+      "properties": {
+        "id": "KU_121",
+        "name": "อาคาร 5",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2517,
+        "floors": 6,
+        "area_sqm": 3955.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567549,
+          13.85117
+        ]
+      },
+      "properties": {
+        "id": "KU_122",
+        "name": "สนามฟุตบอล",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2533,
+        "floors": 0,
+        "area_sqm": 5400.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568443,
+          13.851525
+        ]
+      },
+      "properties": {
+        "id": "KU_123",
+        "name": "อาคารอุบลเรียงสุวรรณ",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2520,
+        "floors": 2,
+        "area_sqm": 1780.43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569193,
+          13.851939
+        ]
+      },
+      "properties": {
+        "id": "KU_124",
+        "name": "อาคาร 7 (อาคารประถม )",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2531,
+        "floors": 4,
+        "area_sqm": 3242.26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569106,
+          13.851594
+        ]
+      },
+      "properties": {
+        "id": "KU_125",
+        "name": "อาคาร 4 (นานาชาติ)",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2537,
+        "floors": 4,
+        "area_sqm": 3608.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569095,
+          13.851122
+        ]
+      },
+      "properties": {
+        "id": "KU_126",
+        "name": "อาคาร 3",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2516,
+        "floors": 4,
+        "area_sqm": 1548.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56922,
+          13.850973
+        ]
+      },
+      "properties": {
+        "id": "KU_127",
+        "name": "อาคารทะเบียนและสถิติวัดประเมินผล",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2520,
+        "floors": 1,
+        "area_sqm": 176.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569065,
+          13.850845
+        ]
+      },
+      "properties": {
+        "id": "KU_128",
+        "name": "อาคาร 2",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2515,
+        "floors": 4,
+        "area_sqm": 1428.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568521,
+          13.85066
+        ]
+      },
+      "properties": {
+        "id": "KU_129",
+        "name": "อาคาร 1",
+        "affiliation": "โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2514,
+        "floors": 4,
+        "area_sqm": 2407.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57006,
+          13.851762
+        ]
+      },
+      "properties": {
+        "id": "KU_130",
+        "name": "อาคารศูนย์ปฏิบัติการเทคโนโลยี เพื่อการศึกษา (อาคาร 3)",
+        "affiliation": "คณะศึกษาศาสตร์",
+        "year_built": 2534,
+        "floors": 5,
+        "area_sqm": 4293.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570251,
+          13.851428
+        ]
+      },
+      "properties": {
+        "id": "KU_131",
+        "name": "อาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโนโลยี (โครงการก่อสร้าง)",
+        "affiliation": "คณะศึกษาศาสตร์",
+        "year_built": 2557,
+        "floors": 10,
+        "area_sqm": 12545.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570045,
+          13.851338
+        ]
+      },
+      "properties": {
+        "id": "KU_132",
+        "name": "อาคารคณะศึกษาศาสตร์ (อาคาร 2)",
+        "affiliation": "คณะศึกษาศาสตร์",
+        "year_built": 2516,
+        "floors": 3,
+        "area_sqm": 2272.55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570062,
+          13.850986
+        ]
+      },
+      "properties": {
+        "id": "KU_133",
+        "name": "อาคารคณะศึกษาศาสตร์ (อาคาร 1)",
+        "affiliation": "คณะศึกษาศาสตร์",
+        "year_built": 2514,
+        "floors": 4,
+        "area_sqm": 2639.48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570823,
+          13.85203
+        ]
+      },
+      "properties": {
+        "id": "KU_134",
+        "name": "อาคารโรงงานต้นแบบบรรจุภัณฑ์ (KU GREEN)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 2,
+        "area_sqm": 786.54
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571777,
+          13.852037
+        ]
+      },
+      "properties": {
+        "id": "KU_135",
+        "name": "โรงอาหารกลาง 2",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2538,
+        "floors": 1,
+        "area_sqm": 1392.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570907,
+          13.851592
+        ]
+      },
+      "properties": {
+        "id": "KU_136",
+        "name": "อาคารเรียนและปฏิบัติการ (อาคาร 2)",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2534,
+        "floors": 4,
+        "area_sqm": 4496.08
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571801,
+          13.851691
+        ]
+      },
+      "properties": {
+        "id": "KU_137",
+        "name": "อาคารปฏิบัติการ วิจัยทางด้านอุตสาหกรรมเกษตร (อาคาร5)",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2550,
+        "floors": 7,
+        "area_sqm": 8114.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571465,
+          13.851342
+        ]
+      },
+      "properties": {
+        "id": "KU_138",
+        "name": "อาคารแปรรูป 1 (อาคาร 6)",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2534,
+        "floors": 1,
+        "area_sqm": 411.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571986,
+          13.851406
+        ]
+      },
+      "properties": {
+        "id": "KU_139",
+        "name": "อาคารกิจกรรมนิสิต (อาคาร 4)",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2546,
+        "floors": 3,
+        "area_sqm": 1038.19
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570891,
+          13.850987
+        ]
+      },
+      "properties": {
+        "id": "KU_140",
+        "name": "อาคารคณะอุตสาหกรรมเกษตร (อาคาร 1)",
+        "affiliation": "คณะอุตสาหกรรมเกษตร",
+        "year_built": 2525,
+        "floors": 4,
+        "area_sqm": 3912.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571371,
+          13.851126
+        ]
+      },
+      "properties": {
+        "id": "KU_141",
+        "name": "อาคารสำนักงานศูนย์ผลิตภัณฑ์นม มก. อาคาร 1",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2544,
+        "floors": 2,
+        "area_sqm": 677.14
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571641,
+          13.851173
+        ]
+      },
+      "properties": {
+        "id": "KU_142",
+        "name": "อาคารผลิตน้ำดื่ม อาคาร 3",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2556,
+        "floors": 3,
+        "area_sqm": 788.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571484,
+          13.850846
+        ]
+      },
+      "properties": {
+        "id": "KU_143",
+        "name": "อาคารผลิตภัณฑ์นมเกษตร อาคาร2 (KU Dairy Processing Plant)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2545,
+        "floors": 1,
+        "area_sqm": 881.79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571596,
+          13.850636
+        ]
+      },
+      "properties": {
+        "id": "KU_144",
+        "name": "ร้าน 7 eleven (บริเวณศูนย์ผลิตภัณฑ์นม มก.)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 144.39
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57203,
+          13.850816
+        ]
+      },
+      "properties": {
+        "id": "KU_145",
+        "name": "อาคารพุทธเกษตร",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2530,
+        "floors": 3,
+        "area_sqm": 405.28
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565299,
+          13.851105
+        ]
+      },
+      "properties": {
+        "id": "KU_146",
+        "name": "สนามเทนนิส",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2535,
+        "floors": 0,
+        "area_sqm": 1564.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564985,
+          13.850838
+        ]
+      },
+      "properties": {
+        "id": "KU_147",
+        "name": "อาคารดาบสากล",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 0,
+        "floors": 1,
+        "area_sqm": 306.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565022,
+          13.850316
+        ]
+      },
+      "properties": {
+        "id": "KU_148",
+        "name": "อาคารเสรีไตรรัตน์",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2534,
+        "floors": 3,
+        "area_sqm": 7834.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564375,
+          13.849818
+        ]
+      },
+      "properties": {
+        "id": "KU_149",
+        "name": "อาคารจำหน่ายดอกไม้สด",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2533,
+        "floors": 2,
+        "area_sqm": 1377.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564235,
+          13.849652
+        ]
+      },
+      "properties": {
+        "id": "KU_150",
+        "name": "โรงเก็บวัสดุบุหงาโครงการหลวง",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2536,
+        "floors": 1,
+        "area_sqm": 405.05
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564198,
+          13.849449
+        ]
+      },
+      "properties": {
+        "id": "KU_151",
+        "name": "อาคารสำนักงานโครงการหลวง",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2525,
+        "floors": 2,
+        "area_sqm": 479.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564428,
+          13.849326
+        ]
+      },
+      "properties": {
+        "id": "KU_152",
+        "name": "อาคารจำหน่ายผลิตภัณฑ์บุหงาโครงการหลวง",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2536,
+        "floors": 2,
+        "area_sqm": 856.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564693,
+          13.849609
+        ]
+      },
+      "properties": {
+        "id": "KU_153",
+        "name": "โรงเก็บผลิตภัณฑ์บุหงาโครงการหลวง (โรงอบ)",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2536,
+        "floors": 1,
+        "area_sqm": 40.09
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564767,
+          13.849679
+        ]
+      },
+      "properties": {
+        "id": "KU_154",
+        "name": "อาคารพืชสวนเก่า 2 (เก็บบุหงา)",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2493,
+        "floors": 1,
+        "area_sqm": 109.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564933,
+          13.84968
+        ]
+      },
+      "properties": {
+        "id": "KU_155",
+        "name": "โรงฟอกผลิตภัณฑ์บุหงาโครงการหลวง",
+        "affiliation": "มูลนิธิโครงการหลวง",
+        "year_built": 2538,
+        "floors": 1,
+        "area_sqm": 140.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565245,
+          13.849689
+        ]
+      },
+      "properties": {
+        "id": "KU_156",
+        "name": "ชมรมดนตรี KU BAND",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2544,
+        "floors": 1,
+        "area_sqm": 216.33
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565344,
+          13.84946
+        ]
+      },
+      "properties": {
+        "id": "KU_157",
+        "name": "สนามเปตอง",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2539,
+        "floors": 0,
+        "area_sqm": 420.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56534,
+          13.84891
+        ]
+      },
+      "properties": {
+        "id": "KU_158",
+        "name": "สนามตะกร้อ",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2535,
+        "floors": 0,
+        "area_sqm": 87.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564387,
+          13.848751
+        ]
+      },
+      "properties": {
+        "id": "KU_159",
+        "name": "ตึกคัทลียา",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 383.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564632,
+          13.8487
+        ]
+      },
+      "properties": {
+        "id": "KU_160",
+        "name": "ตึกมหาหงส์",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 455.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564518,
+          13.848512
+        ]
+      },
+      "properties": {
+        "id": "KU_161",
+        "name": "ตึกศึกษา (Study Room)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 164.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564196,
+          13.848424
+        ]
+      },
+      "properties": {
+        "id": "KU_162",
+        "name": "ตึกขจรรัตน์",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 388.76
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564517,
+          13.848128
+        ]
+      },
+      "properties": {
+        "id": "KU_163",
+        "name": "ตึกบุษกร",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 700.03
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565117,
+          13.848333
+        ]
+      },
+      "properties": {
+        "id": "KU_164",
+        "name": "ตึกพุทธรักษา",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 452.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564929,
+          13.848006
+        ]
+      },
+      "properties": {
+        "id": "KU_165",
+        "name": "ตึกราชาวดี",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 453.06
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56376,
+          13.84772
+        ]
+      },
+      "properties": {
+        "id": "KU_166",
+        "name": "อาคารโรงละคร",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2535,
+        "floors": 8,
+        "area_sqm": 2856.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56329,
+          13.847313
+        ]
+      },
+      "properties": {
+        "id": "KU_167",
+        "name": "อาคารนิทรรศการ",
+        "affiliation": "คณะมนุษยศาสตร์",
+        "year_built": 2535,
+        "floors": 2,
+        "area_sqm": 1858.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564211,
+          13.847447
+        ]
+      },
+      "properties": {
+        "id": "KU_168",
+        "name": "อาคารเวทีกลางแจ้ง",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2535,
+        "floors": 1,
+        "area_sqm": 154.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564406,
+          13.847319
+        ]
+      },
+      "properties": {
+        "id": "KU_169",
+        "name": "ศาลาบุษบก",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2535,
+        "floors": 1,
+        "area_sqm": 104.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566149,
+          13.849194
+        ]
+      },
+      "properties": {
+        "id": "KU_170",
+        "name": "หอพักหญิง (ดารารัตน์)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2515,
+        "floors": 5,
+        "area_sqm": 1795.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566138,
+          13.848832
+        ]
+      },
+      "properties": {
+        "id": "KU_171",
+        "name": "หอพักหญิง (วาสนา)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2515,
+        "floors": 5,
+        "area_sqm": 1795.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566017,
+          13.848431
+        ]
+      },
+      "properties": {
+        "id": "KU_172",
+        "name": "สนามวอลเล่ย์บอล",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2535,
+        "floors": 0,
+        "area_sqm": 324.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567184,
+          13.849752
+        ]
+      },
+      "properties": {
+        "id": "KU_173",
+        "name": "อาคารสระว่ายน้ำจุฬาภรณ์วลัยลักษณ์",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2521,
+        "floors": 1,
+        "area_sqm": 3080.61
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568324,
+          13.849758
+        ]
+      },
+      "properties": {
+        "id": "KU_174",
+        "name": "อาคารจักรพันธ์เพ็ญศิริ",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2529,
+        "floors": 2,
+        "area_sqm": 5672.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56947,
+          13.850108
+        ]
+      },
+      "properties": {
+        "id": "KU_175",
+        "name": "อาคารเฉลิมพระเกียรติ 4 รอบพระชันษาจุฬาภรณ์ (ศูนย์เรียนรวม 4)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2549,
+        "floors": 10,
+        "area_sqm": 6956.23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569399,
+          13.849751
+        ]
+      },
+      "properties": {
+        "id": "KU_176",
+        "name": "อาคารศูนย์เรียนรวม 2",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2530,
+        "floors": 4,
+        "area_sqm": 1946.16
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569408,
+          13.849311
+        ]
+      },
+      "properties": {
+        "id": "KU_177",
+        "name": "อาคารศูนย์เรียนรวม 3",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2540,
+        "floors": 4,
+        "area_sqm": 4742.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570085,
+          13.850099
+        ]
+      },
+      "properties": {
+        "id": "KU_178",
+        "name": "อาคารคณะ สังคมศาสตร์ (อาคาร 2)",
+        "affiliation": "คณะสังคมศาสตร์",
+        "year_built": 2532,
+        "floors": 4,
+        "area_sqm": 1769.97
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569929,
+          13.849887
+        ]
+      },
+      "properties": {
+        "id": "KU_179",
+        "name": "อาคารคณะ สังคมศาสตร์ (อาคาร 3)",
+        "affiliation": "คณะสังคมศาสตร์",
+        "year_built": 2542,
+        "floors": 5,
+        "area_sqm": 1926.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570156,
+          13.849712
+        ]
+      },
+      "properties": {
+        "id": "KU_180",
+        "name": "อาคารคณะ สังคมศาสตร์ (อาคาร 1)",
+        "affiliation": "คณะสังคมศาสตร์",
+        "year_built": 2520,
+        "floors": 5,
+        "area_sqm": 3871.32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570131,
+          13.849412
+        ]
+      },
+      "properties": {
+        "id": "KU_181",
+        "name": "อาคารคณะ สังคมศาสตร์ (อาคาร 4)",
+        "affiliation": "คณะสังคมศาสตร์",
+        "year_built": 2550,
+        "floors": 10,
+        "area_sqm": 6261.53
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571045,
+          13.849867
+        ]
+      },
+      "properties": {
+        "id": "KU_182",
+        "name": "อาคารวชิรานุสรณ์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2548,
+        "floors": 10,
+        "area_sqm": 13027.68
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571471,
+          13.850312
+        ]
+      },
+      "properties": {
+        "id": "KU_183",
+        "name": "อาคารปฏิบัติการ ภาควิชาพืชไร่นา 2",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2510,
+        "floors": 1,
+        "area_sqm": 146.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571654,
+          13.85031
+        ]
+      },
+      "properties": {
+        "id": "KU_184",
+        "name": "โรงรถอาคารภาควิชาพืชไร่นา",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2525,
+        "floors": 1,
+        "area_sqm": 34.43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571497,
+          13.850204
+        ]
+      },
+      "properties": {
+        "id": "KU_185",
+        "name": "อาคารปฏิบัติการ ภาควิชาพืชไร่นา 1",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2510,
+        "floors": 1,
+        "area_sqm": 147.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571883,
+          13.850309
+        ]
+      },
+      "properties": {
+        "id": "KU_186",
+        "name": "อาคารภาควิชาพืชไร่นา (อาคาร 2)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2510,
+        "floors": 1,
+        "area_sqm": 189.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57207,
+          13.850203
+        ]
+      },
+      "properties": {
+        "id": "KU_187",
+        "name": "อาคารภาควิชาพืชไร่นา (อาคาร 1)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2510,
+        "floors": 2,
+        "area_sqm": 378.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571522,
+          13.849966
+        ]
+      },
+      "properties": {
+        "id": "KU_188",
+        "name": "เรือนเพาะชำ (ข้างอาคารวชิรานุสรณ์)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 464.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57199,
+          13.849611
+        ]
+      },
+      "properties": {
+        "id": "KU_189",
+        "name": "เรือนปลูกพืชทดลอง ระยะที่ 1 (จำนวน 7 หลัง)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 2083.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571814,
+          13.849448
+        ]
+      },
+      "properties": {
+        "id": "KU_190",
+        "name": "เรือนปลูกพืชทดลอง ระยะที่ 2 ( จำนวน 4 หลัง)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2556,
+        "floors": 1,
+        "area_sqm": 1368.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570992,
+          13.849294
+        ]
+      },
+      "properties": {
+        "id": "KU_191",
+        "name": "อาคารจรัดสุนทรสิงห์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2521,
+        "floors": 5,
+        "area_sqm": 3807.44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57101,
+          13.84892
+        ]
+      },
+      "properties": {
+        "id": "KU_192",
+        "name": "อาคารคณะเกษตร",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2520,
+        "floors": 5,
+        "area_sqm": 3192.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571867,
+          13.848972
+        ]
+      },
+      "properties": {
+        "id": "KU_193",
+        "name": "อาคารภาควิชาปฐพีวิทยา (สรสิทธิ์ วัชโรทยาน)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2516,
+        "floors": 5,
+        "area_sqm": 2730.53
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566853,
+          13.848938
+        ]
+      },
+      "properties": {
+        "id": "KU_194",
+        "name": "ร้าน 7 eleven บริเวณโรงอาหารกลาง 1",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 56.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567161,
+          13.848737
+        ]
+      },
+      "properties": {
+        "id": "KU_195",
+        "name": "โรงอาหารกลาง 1",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2519,
+        "floors": 1,
+        "area_sqm": 2306.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567728,
+          13.848967
+        ]
+      },
+      "properties": {
+        "id": "KU_196",
+        "name": "หอพักชาย (หอ12)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2510,
+        "floors": 2,
+        "area_sqm": 597.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568412,
+          13.848956
+        ]
+      },
+      "properties": {
+        "id": "KU_197",
+        "name": "หอพักชาย (หอ 14)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2515,
+        "floors": 2,
+        "area_sqm": 579.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568125,
+          13.848765
+        ]
+      },
+      "properties": {
+        "id": "KU_198",
+        "name": "หอพักชาย (ตึก 13)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2510,
+        "floors": 5,
+        "area_sqm": 2353.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568317,
+          13.848504
+        ]
+      },
+      "properties": {
+        "id": "KU_199",
+        "name": "หอพักชาย (หอ 13)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 587.21
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568716,
+          13.847908
+        ]
+      },
+      "properties": {
+        "id": "KU_200",
+        "name": "หอพักชาย (ตึก 5)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 696.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567092,
+          13.848089
+        ]
+      },
+      "properties": {
+        "id": "KU_201",
+        "name": "อาคาร KU.MINISHOP 1",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2552,
+        "floors": 1,
+        "area_sqm": 128.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567242,
+          13.848135
+        ]
+      },
+      "properties": {
+        "id": "KU_202",
+        "name": "อาคาร KU.MINISHOP 2",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2552,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567375,
+          13.848133
+        ]
+      },
+      "properties": {
+        "id": "KU_203",
+        "name": "อาคาร KU.MINISHOP 3",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2552,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56747,
+          13.848142
+        ]
+      },
+      "properties": {
+        "id": "KU_204",
+        "name": "ห้องน้ำ (ข้างอาคาร KU.MINISHOP 3)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2552,
+        "floors": 1,
+        "area_sqm": 147.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567313,
+          13.847945
+        ]
+      },
+      "properties": {
+        "id": "KU_205",
+        "name": "กองกิจการนิสิต (ตึก 8)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 691.35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567448,
+          13.847714
+        ]
+      },
+      "properties": {
+        "id": "KU_206",
+        "name": "ชมรมค่ายอาสา พัฒนาชนบท",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2515,
+        "floors": 1,
+        "area_sqm": 49.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567387,
+          13.847601
+        ]
+      },
+      "properties": {
+        "id": "KU_207",
+        "name": "กองกิจการนิสิต (หอ 2)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 216.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567586,
+          13.84749
+        ]
+      },
+      "properties": {
+        "id": "KU_208",
+        "name": "หน่วยซ่อมบำรุง (หอ 3)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 513.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567781,
+          13.847379
+        ]
+      },
+      "properties": {
+        "id": "KU_209",
+        "name": "กองกิจการนิสิต (หอ 4)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 238.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568051,
+          13.847625
+        ]
+      },
+      "properties": {
+        "id": "KU_210",
+        "name": "หอพักชาย (ตึก 12)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2505,
+        "floors": 3,
+        "area_sqm": 1363.68
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569426,
+          13.848747
+        ]
+      },
+      "properties": {
+        "id": "KU_211",
+        "name": "อาคารคณะมนุษยศาสตร์ อาคาร 1",
+        "affiliation": "คณะมนุษยศาสตร์",
+        "year_built": 2530,
+        "floors": 6,
+        "area_sqm": 4482.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570022,
+          13.848972
+        ]
+      },
+      "properties": {
+        "id": "KU_212",
+        "name": "คณะมนุษย์ศาสตร์ อาคาร 3",
+        "affiliation": "คณะมนุษยศาสตร์",
+        "year_built": 2530,
+        "floors": 2,
+        "area_sqm": 704.93
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57017,
+          13.84878
+        ]
+      },
+      "properties": {
+        "id": "KU_213",
+        "name": "คณะมนุษย์ศาสตร์ อาคาร 2",
+        "affiliation": "คณะมนุษยศาสตร์",
+        "year_built": 2522,
+        "floors": 5,
+        "area_sqm": 1809.52
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56931,
+          13.848255
+        ]
+      },
+      "properties": {
+        "id": "KU_214",
+        "name": "อาคารจุฬาภรณ์พิศาลศิลป์ (อาคาร 4)",
+        "affiliation": "คณะมนุษยศาสตร์",
+        "year_built": 2554,
+        "floors": 10,
+        "area_sqm": 10354.32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570139,
+          13.848199
+        ]
+      },
+      "properties": {
+        "id": "KU_215",
+        "name": "อาคารสารสนเทศบัณฑิตศึกษา",
+        "affiliation": "บัณฑิตวิทยาลัย",
+        "year_built": 2543,
+        "floors": 8,
+        "area_sqm": 4390.38
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570056,
+          13.847856
+        ]
+      },
+      "properties": {
+        "id": "KU_216",
+        "name": "อาคารบรรเจิด คติการ",
+        "affiliation": "บัณฑิตวิทยาลัย",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 688.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570003,
+          13.847514
+        ]
+      },
+      "properties": {
+        "id": "KU_217",
+        "name": "อาคารกำพล อดุลวิทย์",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 642.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570061,
+          13.84705
+        ]
+      },
+      "properties": {
+        "id": "KU_218",
+        "name": "อาคารพนมสมิตานนท์",
+        "affiliation": "สำนักส่งเสริมและฝึกอบรม",
+        "year_built": 2500,
+        "floors": 3,
+        "area_sqm": 1583.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569553,
+          13.847653
+        ]
+      },
+      "properties": {
+        "id": "KU_219",
+        "name": "อาคารระพีสาคริก (อาคารใช้งานร่วมกัน กองกิจการนิสิตและสำนักทะเบียนและประมวลผล)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2556,
+        "floors": 7,
+        "area_sqm": 3983.55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569281,
+          13.847194
+        ]
+      },
+      "properties": {
+        "id": "KU_220",
+        "name": "อาคารสำนักทะเบียนและประมวลผล",
+        "affiliation": "สำนักทะเบียนและประมวลผล",
+        "year_built": 2497,
+        "floors": 2,
+        "area_sqm": 935.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568593,
+          13.847259
+        ]
+      },
+      "properties": {
+        "id": "KU_221",
+        "name": "อาคารกองกิจการนิสิต",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2500,
+        "floors": 3,
+        "area_sqm": 1279.05
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571842,
+          13.848184
+        ]
+      },
+      "properties": {
+        "id": "KU_222",
+        "name": "อาคารเทพรัตน์วิทยโชติ (อาคารการเรียนรู้)",
+        "affiliation": "สำนักหอสมุด",
+        "year_built": 2547,
+        "floors": 5,
+        "area_sqm": 9873.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571834,
+          13.847661
+        ]
+      },
+      "properties": {
+        "id": "KU_223",
+        "name": "อาคารช่วงเกษตรศิลปการ",
+        "affiliation": "สำนักหอสมุด",
+        "year_built": 2522,
+        "floors": 3,
+        "area_sqm": 5288.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570998,
+          13.847214
+        ]
+      },
+      "properties": {
+        "id": "KU_224",
+        "name": "อาคารศูนย์เรียนรวม 1",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2514,
+        "floors": 3,
+        "area_sqm": 4028.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571678,
+          13.846647
+        ]
+      },
+      "properties": {
+        "id": "KU_225",
+        "name": "อาคารสุวรรณวาจกกสิกิจ",
+        "affiliation": "สถาบันวิจัยและพัฒนาแห่ง มหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2522,
+        "floors": 3,
+        "area_sqm": 3327.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570643,
+          13.847027
+        ]
+      },
+      "properties": {
+        "id": "KU_226",
+        "name": "ร้าน 7 eleven บริเวณศูนย์เรียนรวม 1",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2541,
+        "floors": 1,
+        "area_sqm": 23.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565305,
+          13.847415
+        ]
+      },
+      "properties": {
+        "id": "KU_227",
+        "name": "อัฒจันทร์สนาม อินทรีย์จันทรสถิตย์ 1",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2534,
+        "floors": 3,
+        "area_sqm": 1700.06
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565784,
+          13.847138
+        ]
+      },
+      "properties": {
+        "id": "KU_228",
+        "name": "สนามอินทรีย์จันทรสถิตย์ (ลู่ลานกรีฑา ยางสังเคราะห์ 1 ลู่)",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2557,
+        "floors": 0,
+        "area_sqm": 6854.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565816,
+          13.847105
+        ]
+      },
+      "properties": {
+        "id": "KU_229",
+        "name": "สนามอินทรีย์จันทรสถิตย์ (สนามฟุตบอล)",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2535,
+        "floors": 0,
+        "area_sqm": 15848.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566285,
+          13.846874
+        ]
+      },
+      "properties": {
+        "id": "KU_230",
+        "name": "อัฒจันทร์สนาม อินทรีย์จันทรสถิตย์ 2",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2557,
+        "floors": 3,
+        "area_sqm": 4115.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56778,
+          13.846861
+        ]
+      },
+      "properties": {
+        "id": "KU_231",
+        "name": "สนามบาสเกตบอล 3 สนาม",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2540,
+        "floors": 0,
+        "area_sqm": 792.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566493,
+          13.846185
+        ]
+      },
+      "properties": {
+        "id": "KU_232",
+        "name": "สนามฝึกสอนยิงธนู",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2545,
+        "floors": 0,
+        "area_sqm": 1346.22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56693,
+          13.845999
+        ]
+      },
+      "properties": {
+        "id": "KU_233",
+        "name": "อาคารชมรมรักบี้",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2540,
+        "floors": 2,
+        "area_sqm": 102.18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566888,
+          13.845843
+        ]
+      },
+      "properties": {
+        "id": "KU_234",
+        "name": "อาคารชมรมกีฬา",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2552,
+        "floors": 4,
+        "area_sqm": 1457.42
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56722,
+          13.84585
+        ]
+      },
+      "properties": {
+        "id": "KU_235",
+        "name": "อาคารเอนกประสงค์ (ชมรมยูโด - ไอกิโด)",
+        "affiliation": "สำนักการกีฬา",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 697.34
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565927,
+          13.846067
+        ]
+      },
+      "properties": {
+        "id": "KU_236",
+        "name": "ชมรมลูกทุ่ง รวมดาวกระจุย",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 282.13
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.566371,
+          13.84581
+        ]
+      },
+      "properties": {
+        "id": "KU_237",
+        "name": "อาคารหอประวัติ มก.",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2486,
+        "floors": 2,
+        "area_sqm": 599.55
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567053,
+          13.845496
+        ]
+      },
+      "properties": {
+        "id": "KU_238",
+        "name": "อาคารร้านค้าสหกรณ์ มหาวิทยาลัยเกษตรศาสตร์",
+        "affiliation": "ร้านสหกรณ์ มหาวิทยาลัยเกษตรศาสตร์ จำกัด",
+        "year_built": 2544,
+        "floors": 2,
+        "area_sqm": 937.98
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568301,
+          13.84676
+        ]
+      },
+      "properties": {
+        "id": "KU_239",
+        "name": "อาคารภิญโญ (สถานพยาบาล อาคาร 1)",
+        "affiliation": "สถานพยาบาล มหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2522,
+        "floors": 1,
+        "area_sqm": 359.53
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568636,
+          13.846733
+        ]
+      },
+      "properties": {
+        "id": "KU_240",
+        "name": "สถานพยาบาล (อาคาร 3)",
+        "affiliation": "สถานพยาบาล มหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2556,
+        "floors": 5,
+        "area_sqm": 558.77
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568324,
+          13.846582
+        ]
+      },
+      "properties": {
+        "id": "KU_241",
+        "name": "สถานพยาบาล (อาคาร 2)",
+        "affiliation": "สถานพยาบาล มหาวิทยาลัยเกษตรศาสตร์",
+        "year_built": 2546,
+        "floors": 3,
+        "area_sqm": 548.34
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5681,
+          13.84626
+        ]
+      },
+      "properties": {
+        "id": "KU_242",
+        "name": "อาคารศูนย์กิจกรรมมหาวิทยาลัย อาคาร 1 (ศูนย์การศึกษานานาชาติ)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2532,
+        "floors": 5,
+        "area_sqm": 2479.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567764,
+          13.845577
+        ]
+      },
+      "properties": {
+        "id": "KU_243",
+        "name": "อาคารปฏิบัติการคอมพิวเตอร์ (อาคาร 2)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2536,
+        "floors": 2,
+        "area_sqm": 1249.22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568398,
+          13.845722
+        ]
+      },
+      "properties": {
+        "id": "KU_244",
+        "name": "อาคารเทพศาสตร์สถิตย์",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2548,
+        "floors": 5,
+        "area_sqm": 4334.93
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568054,
+          13.845458
+        ]
+      },
+      "properties": {
+        "id": "KU_245",
+        "name": "อาคารกิจกรรม มก. ศูนย์บริการมัลติมีเดีย (อาคาร 3)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2538,
+        "floors": 2,
+        "area_sqm": 689.22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567688,
+          13.845215
+        ]
+      },
+      "properties": {
+        "id": "KU_246",
+        "name": "อาคารสหกรณ์ออมทรัพย์ (KU. HOME)",
+        "affiliation": "สหกรณ์ออมทรัพย์ มหาวิทยาลัยเกษตรศาสตร์ จำกัด",
+        "year_built": 2540,
+        "floors": 9,
+        "area_sqm": 7477.09
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569206,
+          13.846583
+        ]
+      },
+      "properties": {
+        "id": "KU_247",
+        "name": "อาคารเรียนและบริหาร (อาคาร 1)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2532,
+        "floors": 5,
+        "area_sqm": 4979.61
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569774,
+          13.846393
+        ]
+      },
+      "properties": {
+        "id": "KU_248",
+        "name": "อาคารเรียนนานาชาติ (อาคาร 17)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2552,
+        "floors": 5,
+        "area_sqm": 3098.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570156,
+          13.846461
+        ]
+      },
+      "properties": {
+        "id": "KU_249",
+        "name": "อาคารสโมสรนิสิต (อาคาร 16)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2546,
+        "floors": 4,
+        "area_sqm": 600.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568678,
+          13.846234
+        ]
+      },
+      "properties": {
+        "id": "KU_250",
+        "name": "อาคารปฏิบัติการคณะวิศวกรรมศาสตร์ (อาคาร 15)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2546,
+        "floors": 9,
+        "area_sqm": 5088.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568973,
+          13.846152
+        ]
+      },
+      "properties": {
+        "id": "KU_251",
+        "name": "อาคารปฏิบัติการวิศวกรรมไฟฟ้า (อาคาร 2)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2520,
+        "floors": 8,
+        "area_sqm": 2746.27
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.56961,
+          13.846167
+        ]
+      },
+      "properties": {
+        "id": "KU_252",
+        "name": "อาคารเรียนคณะ (อาคาร 3)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2512,
+        "floors": 4,
+        "area_sqm": 2950.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570108,
+          13.846273
+        ]
+      },
+      "properties": {
+        "id": "KU_253",
+        "name": "อาคารศูนย์คอมพิวเตอร์วิศวกรรม (อาคาร 4)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2521,
+        "floors": 2,
+        "area_sqm": 698.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568838,
+          13.845596
+        ]
+      },
+      "properties": {
+        "id": "KU_254",
+        "name": "อาคารปฏิบัติการวิศวกรรมเครื่องกล (อาคาร 5)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2549,
+        "floors": 6,
+        "area_sqm": 4935.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569266,
+          13.845609
+        ]
+      },
+      "properties": {
+        "id": "KU_255",
+        "name": "อาคารวัสดุธานี (อาคาร 10)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2511,
+        "floors": 3,
+        "area_sqm": 3379.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569661,
+          13.845627
+        ]
+      },
+      "properties": {
+        "id": "KU_256",
+        "name": "อาคารปฏิบัติการวิศวกรรมโยธา (อาคาร 9 อาคารบุญสมสุวชิรัตน์)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2552,
+        "floors": 9,
+        "area_sqm": 8646.24
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570155,
+          13.845481
+        ]
+      },
+      "properties": {
+        "id": "KU_257",
+        "name": "อาคารวิศวกรรมศาสตร์ 60 ปี (อาคารชูชาติกำภู อาคาร 14)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2545,
+        "floors": 13,
+        "area_sqm": 15494.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569602,
+          13.845249
+        ]
+      },
+      "properties": {
+        "id": "KU_258",
+        "name": "อาคารชำนาญเพ็ญชาติ (อาคาร 11 วิศวกรรมสิ่งแวดล้อม)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2539,
+        "floors": 4,
+        "area_sqm": 804.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569613,
+          13.845075
+        ]
+      },
+      "properties": {
+        "id": "KU_259",
+        "name": "อาคารวิศวกรรมสำรวจและบริหารการก่อสร้าง (อาคาร 12)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2511,
+        "floors": 2,
+        "area_sqm": 428.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569156,
+          13.84495
+        ]
+      },
+      "properties": {
+        "id": "KU_260",
+        "name": "อาคารปฏิบัติการและวิจัย (อาคาร 8)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2533,
+        "floors": 7,
+        "area_sqm": 4665.84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569545,
+          13.844741
+        ]
+      },
+      "properties": {
+        "id": "KU_261",
+        "name": "อาคารปฏิบัติการวิศวกรรมทรัพยากรน้ำ (อาคาร 13)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2513,
+        "floors": 2,
+        "area_sqm": 998.36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568729,
+          13.845144
+        ]
+      },
+      "properties": {
+        "id": "KU_262",
+        "name": "อาคารปฏิบัติการยานยนต์ (อาคาร 6)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2519,
+        "floors": 3,
+        "area_sqm": 1049.02
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568009,
+          13.845025
+        ]
+      },
+      "properties": {
+        "id": "KU_263",
+        "name": "โรงรถ",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2538,
+        "floors": 1,
+        "area_sqm": 25.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568142,
+          13.844899
+        ]
+      },
+      "properties": {
+        "id": "KU_264",
+        "name": "อาคารสำนักบริการคอมพิวเตอร์หลังเดิม ส่งมอบให้คณะวิศวกรรมศาตร์",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 0,
+        "floors": 3,
+        "area_sqm": 1848.14
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568479,
+          13.844777
+        ]
+      },
+      "properties": {
+        "id": "KU_265",
+        "name": "อาคารปฏิบัติการวิศวกรรมอุตสาหการ (อาคาร 7)",
+        "affiliation": "คณะวิศวกรรมศาสตร์",
+        "year_built": 2528,
+        "floors": 2,
+        "area_sqm": 939.95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570159,
+          13.844729
+        ]
+      },
+      "properties": {
+        "id": "KU_266",
+        "name": "อาคารปฏิบัติการคณะเศรษฐศาสตร์",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2547,
+        "floors": 7,
+        "area_sqm": 9246.82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570152,
+          13.844145
+        ]
+      },
+      "properties": {
+        "id": "KU_267",
+        "name": "อาคารศูนย์วิจัยเศรษฐศาสตร์ประยุกต์ (อาคาร 3)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2530,
+        "floors": 3,
+        "area_sqm": 694.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570151,
+          13.843974
+        ]
+      },
+      "properties": {
+        "id": "KU_268",
+        "name": "ร้านค้า (ข้างห้องสมุดพิทยาลงกรณ์)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2530,
+        "floors": 1,
+        "area_sqm": 78.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569992,
+          13.843896
+        ]
+      },
+      "properties": {
+        "id": "KU_269",
+        "name": "อาคารห้องสมุดพิทยาลงกรณ์",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2506,
+        "floors": 2,
+        "area_sqm": 532.98
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570092,
+          13.843818
+        ]
+      },
+      "properties": {
+        "id": "KU_270",
+        "name": "โรงรถ 1 (ข้างอาคารห้องสมุดพิทยาลงกรณ์)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 66.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569963,
+          13.843705
+        ]
+      },
+      "properties": {
+        "id": "KU_271",
+        "name": "ศาลาประชาสัมพันธ์",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 36.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569965,
+          13.844229
+        ]
+      },
+      "properties": {
+        "id": "KU_272",
+        "name": "อาคารการเงิน",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2526,
+        "floors": 2,
+        "area_sqm": 132.63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569903,
+          13.844118
+        ]
+      },
+      "properties": {
+        "id": "KU_273",
+        "name": "ห้องน้ำ (ข้างอาคารวิจารณ์พาณิชย์)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 44.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569616,
+          13.844329
+        ]
+      },
+      "properties": {
+        "id": "KU_274",
+        "name": "อาคารพิจารณ์พาณิชย์ (อาคาร 2)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2520,
+        "floors": 3,
+        "area_sqm": 2158.32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569534,
+          13.844125
+        ]
+      },
+      "properties": {
+        "id": "KU_275",
+        "name": "อาคารพิทยาลงกรณ์ ( อาคาร 1)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2505,
+        "floors": 3,
+        "area_sqm": 1442.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569759,
+          13.844466
+        ]
+      },
+      "properties": {
+        "id": "KU_276",
+        "name": "อาคารเก็บของคณะเศรษฐศาสตร์",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569807,
+          13.84439
+        ]
+      },
+      "properties": {
+        "id": "KU_277",
+        "name": "โรงรถ 2 (ข้างอาคารพิจารณ์พาณิชย์)",
+        "affiliation": "คณะเศรษฐศาสตร์",
+        "year_built": 2540,
+        "floors": 1,
+        "area_sqm": 54.45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569056,
+          13.84464
+        ]
+      },
+      "properties": {
+        "id": "KU_278",
+        "name": "อาคารการเรียนการสอนคณะบริหารธุรกิจ (อาคาร 1)",
+        "affiliation": "คณะบริหารธุรกิจ",
+        "year_built": 2533,
+        "floors": 5,
+        "area_sqm": 3616.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568828,
+          13.844475
+        ]
+      },
+      "properties": {
+        "id": "KU_279",
+        "name": "อาคารการเรียนการสอนคณะบริหารธุรกิจ (อาคาร 2)",
+        "affiliation": "คณะบริหารธุรกิจ",
+        "year_built": 2522,
+        "floors": 2,
+        "area_sqm": 781.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569085,
+          13.844327
+        ]
+      },
+      "properties": {
+        "id": "KU_280",
+        "name": "อาคารการเรียนการสอนคณะบริหารธุรกิจ(อาคาร 3)",
+        "affiliation": "คณะบริหารธุรกิจ",
+        "year_built": 2513,
+        "floors": 3,
+        "area_sqm": 582.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.568811,
+          13.844058
+        ]
+      },
+      "properties": {
+        "id": "KU_281",
+        "name": "อาคารการเรียนการสอน คณะบริหารธุรกิจ (อาคาร 4)",
+        "affiliation": "คณะบริหารธุรกิจ",
+        "year_built": 2551,
+        "floors": 10,
+        "area_sqm": 9178.63
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564186,
+          13.846539
+        ]
+      },
+      "properties": {
+        "id": "KU_282",
+        "name": "อาคารเอนกประสงค์ (กิจกรรมศิลปวัฒนธรรม)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2544,
+        "floors": 2,
+        "area_sqm": 642.89
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564356,
+          13.84639
+        ]
+      },
+      "properties": {
+        "id": "KU_283",
+        "name": "บ้านฝึกนิสิตคหกรรมศาสตร์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2518,
+        "floors": 3,
+        "area_sqm": 315.67
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.564902,
+          13.84613
+        ]
+      },
+      "properties": {
+        "id": "KU_284",
+        "name": "อาคาร KU Avenue (หลังที่ 2)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2556,
+        "floors": 1,
+        "area_sqm": 844.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565406,
+          13.845789
+        ]
+      },
+      "properties": {
+        "id": "KU_285",
+        "name": "อาคาร KU Avenue (หลังที่ 1)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2552,
+        "floors": 2,
+        "area_sqm": 1047.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.565899,
+          13.845588
+        ]
+      },
+      "properties": {
+        "id": "KU_286",
+        "name": "อาคารที่ทำการงานรักษาความปลอดภัย (เกษตรร่วมใจ)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 2,
+        "area_sqm": 284.94
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.567657,
+          13.844648
+        ]
+      },
+      "properties": {
+        "id": "KU_287",
+        "name": "อาคารปฏิบัติการทางด้านคอมพิวเตอร์",
+        "affiliation": "สำนักบริการคอมพิวเตอร์",
+        "year_built": 2556,
+        "floors": 11,
+        "area_sqm": 19000.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.569554,
+          13.843565
+        ]
+      },
+      "properties": {
+        "id": "KU_288",
+        "name": "อาคารจอดรถ งามวงศ์วาน 2",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2551,
+        "floors": 5,
+        "area_sqm": 3526.73
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57066,
+          13.842944
+        ]
+      },
+      "properties": {
+        "id": "KU_289",
+        "name": "อาคารจอดรถ งามวงศ์วาน 1",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2547,
+        "floors": 5,
+        "area_sqm": 5110.17
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571153,
+          13.843465
+        ]
+      },
+      "properties": {
+        "id": "KU_290",
+        "name": "อาคารวิทยบริการ",
+        "affiliation": "สำนักส่งเสริมและฝึกอบรม",
+        "year_built": 2543,
+        "floors": 9,
+        "area_sqm": 8983.67
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571601,
+          13.843084
+        ]
+      },
+      "properties": {
+        "id": "KU_291",
+        "name": "อาคารวิทยพัฒนา",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2539,
+        "floors": 7,
+        "area_sqm": 3370.95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57061,
+          13.843574
+        ]
+      },
+      "properties": {
+        "id": "KU_292",
+        "name": "ตึกภาควิชาคหกรรมศาสตร์ (ศ.ชวนชม จันทระเปารยะ)",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2500,
+        "floors": 2,
+        "area_sqm": 951.01
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570675,
+          13.843905
+        ]
+      },
+      "properties": {
+        "id": "KU_293",
+        "name": "ตึกลดา รตกสิกร",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2518,
+        "floors": 2,
+        "area_sqm": 577.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570944,
+          13.843847
+        ]
+      },
+      "properties": {
+        "id": "KU_294",
+        "name": "อาคารภาควิชาคหกรรมศาสตร์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2540,
+        "floors": 3,
+        "area_sqm": 714.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570733,
+          13.844225
+        ]
+      },
+      "properties": {
+        "id": "KU_295",
+        "name": "โรงอาหารภาควิชา คหกรรมศาสตร์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2513,
+        "floors": 1,
+        "area_sqm": 224.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571101,
+          13.844196
+        ]
+      },
+      "properties": {
+        "id": "KU_296",
+        "name": "โรงเรียนอนุบาล คหกรรมศาสตร์",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2539,
+        "floors": 3,
+        "area_sqm": 865.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571011,
+          13.844053
+        ]
+      },
+      "properties": {
+        "id": "KU_297",
+        "name": "ศาลากิจกรรม",
+        "affiliation": "คณะเกษตร",
+        "year_built": 2537,
+        "floors": 1,
+        "area_sqm": 42.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571108,
+          13.844054
+        ]
+      },
+      "properties": {
+        "id": "KU_298",
+        "name": "อาคารสโมสรนิสิต ภาควิชาคหกรรม",
+        "affiliation": "คณะเกษตร",
+        "year_built": 0,
+        "floors": 1,
+        "area_sqm": 90.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570684,
+          13.844672
+        ]
+      },
+      "properties": {
+        "id": "KU_299",
+        "name": "เรือนเพาะชำ 1-2",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2525,
+        "floors": 1,
+        "area_sqm": 662.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57094,
+          13.844677
+        ]
+      },
+      "properties": {
+        "id": "KU_300",
+        "name": "อาคารเก็บสารเคมี",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2538,
+        "floors": 1,
+        "area_sqm": 128.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570942,
+          13.844596
+        ]
+      },
+      "properties": {
+        "id": "KU_301",
+        "name": "อาคารปฏิบัติการวิจัย (ภาควิชาพันธุ์ศาสตร์)",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2530,
+        "floors": 1,
+        "area_sqm": 76.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571529,
+          13.844697
+        ]
+      },
+      "properties": {
+        "id": "KU_302",
+        "name": "อาคารสุขประชา วาจานนท์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2534,
+        "floors": 5,
+        "area_sqm": 5815.18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571655,
+          13.84512
+        ]
+      },
+      "properties": {
+        "id": "KU_303",
+        "name": "อาคารภาควิชาสถิติ-คณิตศาสตร์-วิทยาการคอมพิวเตอร์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2525,
+        "floors": 5,
+        "area_sqm": 3525.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57077,
+          13.845106
+        ]
+      },
+      "properties": {
+        "id": "KU_304",
+        "name": "อาคารยงยุทธ เจียมไชยศรี",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2522,
+        "floors": 4,
+        "area_sqm": 2506.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57229,
+          13.844994
+        ]
+      },
+      "properties": {
+        "id": "KU_305",
+        "name": "อาคารทวี ญาณสุคนธ์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2538,
+        "floors": 10,
+        "area_sqm": 11133.11
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.570883,
+          13.845976
+        ]
+      },
+      "properties": {
+        "id": "KU_306",
+        "name": "อาคารวิฑูรย์ หงส์สุมาลย์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2512,
+        "floors": 5,
+        "area_sqm": 2288.08
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571362,
+          13.846199
+        ]
+      },
+      "properties": {
+        "id": "KU_307",
+        "name": "อาคารภาควิชาสัตววิทยา",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2547,
+        "floors": 5,
+        "area_sqm": 3389.75
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5714,
+          13.845892
+        ]
+      },
+      "properties": {
+        "id": "KU_308",
+        "name": "อาคารปฏิบัติการวิทยาศาสตร์กายภาพ",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2556,
+        "floors": 12,
+        "area_sqm": 20000.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571738,
+          13.845937
+        ]
+      },
+      "properties": {
+        "id": "KU_309",
+        "name": "อาคารศาลาลอย",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2515,
+        "floors": 3,
+        "area_sqm": 477.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571744,
+          13.845759
+        ]
+      },
+      "properties": {
+        "id": "KU_310",
+        "name": "อาคารศูนย์เครื่องมือวิทยาศาสตร์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2538,
+        "floors": 1,
+        "area_sqm": 143.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571682,
+          13.845737
+        ]
+      },
+      "properties": {
+        "id": "KU_311",
+        "name": "อาคารโรงงานต้นแบบ ผลิตเครื่องดื่มนมเปรี้ยวคุณภาพสูง จากถั่วเหลือง",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 35.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572039,
+          13.845966
+        ]
+      },
+      "properties": {
+        "id": "KU_312",
+        "name": "อาคารปฏิบัติการรวมทางวิทยาศาตร์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2556,
+        "floors": 12,
+        "area_sqm": 18600.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.571692,
+          13.845543
+        ]
+      },
+      "properties": {
+        "id": "KU_313",
+        "name": "อาคารจุลชีววิทยา-พันธุศาสตร์",
+        "affiliation": "คณะวิทยาศาสตร์",
+        "year_built": 2520,
+        "floors": 6,
+        "area_sqm": 5072.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572294,
+          13.845778
+        ]
+      },
+      "properties": {
+        "id": "KU_314",
+        "name": "อาคารสุวรรณวาจกกสิกิจ (ไปรษณีย์เดิม)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2522,
+        "floors": 2,
+        "area_sqm": 558.74
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572871,
+          13.846002
+        ]
+      },
+      "properties": {
+        "id": "KU_315",
+        "name": "อาคารศูนย์ฝึกอบรมวนศาสตร์ชุมชนแห่งภูมิภาคเอเซียแปซิฟิก 2",
+        "affiliation": "ศูนย์ฝึกอบรมวนศาสตร์ชุมชนแห่งภูมิภาคเอเซียแปซิฟิก",
+        "year_built": 2532,
+        "floors": 6,
+        "area_sqm": 1358.26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.572865,
+          13.84573
+        ]
+      },
+      "properties": {
+        "id": "KU_316",
+        "name": "อาคารศูนย์ฝึกอบรมวนศาสตร์ชุมชนแห่งภูมิภาคเอเซียแปซิฟิก 1",
+        "affiliation": "ศูนย์ฝึกอบรมวนศาสตร์ชุมชนแห่งภูมิภาคเอเซียแปซิฟิก",
+        "year_built": 2530,
+        "floors": 4,
+        "area_sqm": 1481.45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573163,
+          13.845916
+        ]
+      },
+      "properties": {
+        "id": "KU_317",
+        "name": "โรงอาหาร คณะวนศาสตร์",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2553,
+        "floors": 1,
+        "area_sqm": 213.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573163,
+          13.845751
+        ]
+      },
+      "properties": {
+        "id": "KU_318",
+        "name": "อาคารปฏิบัติการ 1 เพาะเลี้ยงเนื้อเยื่อไม้ป่า",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2537,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573403,
+          13.845989
+        ]
+      },
+      "properties": {
+        "id": "KU_319",
+        "name": "อาคารสโมสรนิสิตวนศาสตร์ ( สมาคมศิษย์เก่า )",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2504,
+        "floors": 2,
+        "area_sqm": 304.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573492,
+          13.845954
+        ]
+      },
+      "properties": {
+        "id": "KU_320",
+        "name": "โรงรถคณะวนศาสตร์",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 0,
+        "floors": 1,
+        "area_sqm": 141.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573689,
+          13.845765
+        ]
+      },
+      "properties": {
+        "id": "KU_321",
+        "name": "อาคารภาควิชาการจัดการป่าไม้",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2504,
+        "floors": 2,
+        "area_sqm": 1130.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574165,
+          13.845925
+        ]
+      },
+      "properties": {
+        "id": "KU_322",
+        "name": "อาคารปฏิบัติการวนศาสตร์ 72 ปี",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2555,
+        "floors": 10,
+        "area_sqm": 5308.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574607,
+          13.845893
+        ]
+      },
+      "properties": {
+        "id": "KU_323",
+        "name": "อาคารปฎิบัติการวนผลิตภัณฑ์ 3 (ตึกโชติรักติประกร)",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2507,
+        "floors": 2,
+        "area_sqm": 768.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574602,
+          13.845741
+        ]
+      },
+      "properties": {
+        "id": "KU_324",
+        "name": "อาคารปฏิบัติการวนผลิตภัณฑ์ 1",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2555,
+        "floors": 4,
+        "area_sqm": 1868.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574988,
+          13.845841
+        ]
+      },
+      "properties": {
+        "id": "KU_325",
+        "name": "อาคารเทคโนโลยีไม้เชิงกล",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2507,
+        "floors": 2,
+        "area_sqm": 298.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573084,
+          13.845505
+        ]
+      },
+      "properties": {
+        "id": "KU_326",
+        "name": "ตึกวินิจวนันดร",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2505,
+        "floors": 2,
+        "area_sqm": 571.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.573083,
+          13.845305
+        ]
+      },
+      "properties": {
+        "id": "KU_327",
+        "name": "อาคารพักนิสิตปริญญาโท",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2542,
+        "floors": 1,
+        "area_sqm": 47.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574005,
+          13.845269
+        ]
+      },
+      "properties": {
+        "id": "KU_328",
+        "name": "อาคารปฏิบัติการวนศาสตร์ 60 ปี",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2540,
+        "floors": 8,
+        "area_sqm": 7066.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574671,
+          13.845273
+        ]
+      },
+      "properties": {
+        "id": "KU_329",
+        "name": "อาคารเทียมคมกฤส",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2522,
+        "floors": 4,
+        "area_sqm": 2999.66
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574412,
+          13.845149
+        ]
+      },
+      "properties": {
+        "id": "KU_330",
+        "name": "อาคารชมรมนิสิต (กระท่อมวนกร )",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2532,
+        "floors": 1,
+        "area_sqm": 96.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574411,
+          13.845072
+        ]
+      },
+      "properties": {
+        "id": "KU_331",
+        "name": "ชมรม the forester",
+        "affiliation": "คณะวนศาสตร์",
+        "year_built": 2537,
+        "floors": 1,
+        "area_sqm": 54.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574309,
+          13.841608
+        ]
+      },
+      "properties": {
+        "id": "KU_332",
+        "name": "ลานเต้นรำ",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 0,
+        "floors": 0,
+        "area_sqm": 701.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.574711,
+          13.841352
+        ]
+      },
+      "properties": {
+        "id": "KU_333",
+        "name": "หอประชุมใหญ่ มก.",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2533,
+        "floors": 3,
+        "area_sqm": 2407.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576006,
+          13.841866
+        ]
+      },
+      "properties": {
+        "id": "KU_334",
+        "name": "ศาลาหกเหลี่ยม",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2539,
+        "floors": 1,
+        "area_sqm": 53.34
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.577427,
+          13.843778
+        ]
+      },
+      "properties": {
+        "id": "KU_335",
+        "name": "โรงอาหารคณะ สัตวแพทยศาสตร์",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2553,
+        "floors": 1,
+        "area_sqm": 210.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576842,
+          13.844102
+        ]
+      },
+      "properties": {
+        "id": "KU_336",
+        "name": "สระสุวรรณชาด",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2548,
+        "floors": 1,
+        "area_sqm": 168.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.577447,
+          13.844377
+        ]
+      },
+      "properties": {
+        "id": "KU_337",
+        "name": "อาคารเฉลิมพระเกียรติ 6 รอบ พระชนมพรรษา",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2538,
+        "floors": 11,
+        "area_sqm": 14554.07
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.577869,
+          13.844437
+        ]
+      },
+      "properties": {
+        "id": "KU_338",
+        "name": "อาคารการเรียน-วิจัยและปฎิบัติการเชี่ยวชาญพิเศษ",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2555,
+        "floors": 9,
+        "area_sqm": 16193.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.577884,
+          13.844812
+        ]
+      },
+      "properties": {
+        "id": "KU_339",
+        "name": "อาคารสนับสนุนและอำนวยการ",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2555,
+        "floors": 10,
+        "area_sqm": 7733.21
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576863,
+          13.844635
+        ]
+      },
+      "properties": {
+        "id": "KU_340",
+        "name": "อาคารจักรพิชัยรณรงค์สงคราม",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2511,
+        "floors": 4,
+        "area_sqm": 1897.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.57711,
+          13.845164
+        ]
+      },
+      "properties": {
+        "id": "KU_341",
+        "name": "อาคารเรียนและปฏิบัติการ คณะสัตวแพทย์ศาสตร์",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2534,
+        "floors": 6,
+        "area_sqm": 8479.24
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5765,
+          13.845069
+        ]
+      },
+      "properties": {
+        "id": "KU_342",
+        "name": "อาคารเรียนและปฏิบัติการกายวิภาคศาสตร์",
+        "affiliation": "คณะสัตวแพทยศาสตร์",
+        "year_built": 2532,
+        "floors": 3,
+        "area_sqm": 1117.06
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576516,
+          13.845547
+        ]
+      },
+      "properties": {
+        "id": "KU_343",
+        "name": "อาคารเรียนและปฎิบัติการ (อาคาร 1)",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2528,
+        "floors": 4,
+        "area_sqm": 1326.82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576725,
+          13.845747
+        ]
+      },
+      "properties": {
+        "id": "KU_344",
+        "name": "ศาลาอ่านหนังสือ 2",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2545,
+        "floors": 1,
+        "area_sqm": 12.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576688,
+          13.845843
+        ]
+      },
+      "properties": {
+        "id": "KU_345",
+        "name": "ห้องประชุมคณะเทคนิคการสัตวแพทย์",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2535,
+        "floors": 1,
+        "area_sqm": 48.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576319,
+          13.846017
+        ]
+      },
+      "properties": {
+        "id": "KU_346",
+        "name": "อาคารเรียนและปฏิบัติการรวมทางด้านเทคนิคการสัตวแพทย์",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2557,
+        "floors": 11,
+        "area_sqm": 12207.26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576659,
+          13.845954
+        ]
+      },
+      "properties": {
+        "id": "KU_347",
+        "name": "โรงอาหารคณะเทคนิคการสัตวแพทย์",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 138.18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.576678,
+          13.84633
+        ]
+      },
+      "properties": {
+        "id": "KU_348",
+        "name": "อาคารสัตว์ทดลองเพื่อการวิจัย (อาคาร 2)",
+        "affiliation": "คณะเทคนิคการสัตวแพทย์",
+        "year_built": 2537,
+        "floors": 1,
+        "area_sqm": 200.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.578762,
+          13.854911
+        ]
+      },
+      "properties": {
+        "id": "KU_349",
+        "name": "อาคารพักอาศัยบุคลากรซอยพหลโยธิน 45 (หลังที่ 1)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2553,
+        "floors": 7,
+        "area_sqm": 7532.34
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.579379,
+          13.854963
+        ]
+      },
+      "properties": {
+        "id": "KU_350",
+        "name": "อาคารพักอาศัยบุคลากรซอยพหลโยธิน 45 (หลังที่ 2)",
+        "affiliation": "สำนักงานอธิการบดี (สำนักงานทรัพย์สิน)",
+        "year_built": 2556,
+        "floors": 11,
+        "area_sqm": 11088.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.578706,
+          13.853786
+        ]
+      },
+      "properties": {
+        "id": "KU_351",
+        "name": "อาคารเอนกประสงค์เพื่อการบริการนิสิตและบุคลากร ซอยพหลโยธิน 45",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2557,
+        "floors": 2,
+        "area_sqm": 3014.17
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.578849,
+          13.853355
+        ]
+      },
+      "properties": {
+        "id": "KU_352",
+        "name": "อาคารสวัสดิการ (อาคาร 1)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 5,
+        "area_sqm": 2483.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.578909,
+          13.8529
+        ]
+      },
+      "properties": {
+        "id": "KU_353",
+        "name": "อาคารสวัสดิการ (อาคาร 2)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 5,
+        "area_sqm": 2483.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.579737,
+          13.853462
+        ]
+      },
+      "properties": {
+        "id": "KU_354",
+        "name": "อาคารสวัสดิการ (อาคาร 3)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 5,
+        "area_sqm": 2483.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.579452,
+          13.85313
+        ]
+      },
+      "properties": {
+        "id": "KU_355",
+        "name": "โรงอาหารสวัสดิการ มก.",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 225.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.579332,
+          13.852942
+        ]
+      },
+      "properties": {
+        "id": "KU_356",
+        "name": "อาคารสวัสดิการ (บ่อบำบัด )",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 1,
+        "area_sqm": 186.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.579778,
+          13.853038
+        ]
+      },
+      "properties": {
+        "id": "KU_357",
+        "name": "อาคารสวัสดิการ (อาคาร 4)",
+        "affiliation": "สำนักงานอธิการบดี(กองยานพาหนะฯ)",
+        "year_built": 2546,
+        "floors": 5,
+        "area_sqm": 2483.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.580369,
+          13.853396
+        ]
+      },
+      "properties": {
+        "id": "KU_358",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 2 (ขจีนุช)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2554,
+        "floors": 12,
+        "area_sqm": 4942.76
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.580251,
+          13.852912
+        ]
+      },
+      "properties": {
+        "id": "KU_359",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 1 (พุทธชาด)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2553,
+        "floors": 7,
+        "area_sqm": 6255.36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.580889,
+          13.853163
+        ]
+      },
+      "properties": {
+        "id": "KU_360",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 7 (กฤษณา)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2557,
+        "floors": 7,
+        "area_sqm": 8680.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.580946,
+          13.852869
+        ]
+      },
+      "properties": {
+        "id": "KU_361",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 6 (แสงจันทร์)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2557,
+        "floors": 8,
+        "area_sqm": 7815.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.581006,
+          13.852504
+        ]
+      },
+      "properties": {
+        "id": "KU_362",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 5 (สุพรรณิการ์)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2557,
+        "floors": 8,
+        "area_sqm": 7815.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.581079,
+          13.852235
+        ]
+      },
+      "properties": {
+        "id": "KU_363",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 4 (เฟื่องฟ้า)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2556,
+        "floors": 8,
+        "area_sqm": 7815.56
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.581119,
+          13.851884
+        ]
+      },
+      "properties": {
+        "id": "KU_364",
+        "name": "อาคารหอพักนิสิต ซอยพหลโยธิน 45 หลังที่ 3 (ลีลาวดี)",
+        "affiliation": "สำนักงานอธิการบดี (กองกิจการนิสิต)",
+        "year_built": 2555,
+        "floors": 8,
+        "area_sqm": 7815.56
+      }
+    }
+  ]
+}

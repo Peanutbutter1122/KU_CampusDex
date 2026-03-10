@@ -6,7 +6,6 @@ class TextfieldComp extends StatefulWidget {
   final String hintText;
   final bool isPassword; 
   final String? errorText;
-  
 
   const TextfieldComp({
     super.key,

@@ -2,7 +2,20 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
+  final double speed;
+  final String destinationName;
+  final int distanceMeters;
+  final bool isNearDestination;
+  final VoidCallback onButtonPressed;
+
+  const BottomNavBar({
+    super.key,
+    required this.speed,
+    required this.destinationName,
+    required this.distanceMeters,
+    required this.isNearDestination,
+    required this.onButtonPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +24,16 @@ class BottomNavBar extends StatelessWidget {
     // ===========================================================
     const double backgroundHeight = 140.0; // ความสูงรวมของวงกลม
     const double pillHeight = 100.0; // ความสูงของแท่งสี่เหลี่ยม
-    
+
     // --- คำนวณตำแหน่งอัตโนมัติ ---
     const double thickStroke = 6.0;
     const double circleCenterY = backgroundHeight / 2;
     const double rOuterCircle = circleCenterY - (thickStroke / 2);
     // ขอบล่างของ pill เสมอกับขอบล่างวงกลม
-    const double pillBottom = circleCenterY + rOuterCircle; 
+    const double pillBottom = circleCenterY + rOuterCircle;
     const double pillTop = pillBottom - pillHeight;
     // ระยะ margin จากขอบล่างสุดของ container ขึ้นมาถึงตัว pill
-    const double pillBottomMargin = backgroundHeight - pillBottom; 
+    const double pillBottomMargin = backgroundHeight - pillBottom;
 
     return Container(
       width: double.infinity,
@@ -42,15 +55,15 @@ class BottomNavBar extends StatelessWidget {
           Positioned(
             left: 0,
             top: 0,
-            width: backgroundHeight, 
-            height: backgroundHeight, 
-            child: const Center(
+            width: backgroundHeight,
+            height: backgroundHeight,
+            child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '4.5',
-                    style: TextStyle(
+                    speed.toStringAsFixed(1),
+                    style: const TextStyle(
                       fontFamily: 'Georgia',
                       color: Colors.black,
                       fontWeight: FontWeight.w900,
@@ -78,11 +91,11 @@ class BottomNavBar extends StatelessWidget {
           // ===========================================================
           Positioned(
             // ✅ แก้ไขจุดที่ 1: เพิ่มค่า left เพื่อผลักข้อความไปทางขวาให้ห่างจากวงกลม
-            left: backgroundHeight, 
+            left: backgroundHeight,
             right: 80, // ปรับ right นิดหน่อยให้สมดุล
-            top: pillTop, 
-            bottom: pillBottomMargin, 
-            child: const Column(
+            top: pillTop,
+            bottom: pillBottomMargin,
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -98,8 +111,8 @@ class BottomNavBar extends StatelessWidget {
                 ),
                 SizedBox(height: 2),
                 Text(
-                  'อาคารระพีสาคริก',
-                  style: TextStyle(
+                  destinationName,
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.w900,
@@ -108,8 +121,8 @@ class BottomNavBar extends StatelessWidget {
                   maxLines: 1,
                 ),
                 Text(
-                  '(150m)',
-                  style: TextStyle(
+                  '(${distanceMeters}m)',
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 13,
                     fontWeight: FontWeight.w900,
@@ -123,36 +136,47 @@ class BottomNavBar extends StatelessWidget {
           // LAYER 4: Compass Button (ปุ่มเข็มทิศ)
           // ===========================================================
           Positioned(
-            right: 18, 
-            top: pillTop, 
+            right: 18,
+            top: pillTop,
             bottom: pillBottomMargin,
-            child: Center( 
-              child: Container(
-                width: 62,
-                height: 62,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF6B838C),
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: const Color(0xFF3B2213),
-                    width: 3.5,
+            child: Center(
+              child: GestureDetector(
+                onTap: onButtonPressed,
+                child: Container(
+                  width: 62,
+                  height: 62,
+                  decoration: BoxDecoration(
+                    color: isNearDestination
+                        ? const Color(0xFF4CAF50)
+                        : const Color(0xFF6B838C),
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: const Color(0xFF3B2213),
+                      width: 3.5,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black26,
+                        offset: Offset(0, 3),
+                        blurRadius: 3,
+                      ),
+                    ],
                   ),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black26,
-                      offset: Offset(0, 3),
-                      blurRadius: 3,
-                    ),
-                  ],
-                ),
-                child: Center(
-                  child: Transform.rotate(
-                    angle: math.pi / 4,
-                    child: const Icon(
-                      Icons.navigation,
-                      color: Colors.black,
-                      size: 34,
-                    ),
+                  child: Center(
+                    child: isNearDestination
+                        ? const Icon(
+                            Icons.check_circle_outline,
+                            color: Colors.white,
+                            size: 34,
+                          )
+                        : Transform.rotate(
+                            angle: math.pi / 4,
+                            child: const Icon(
+                              Icons.navigation,
+                              color: Colors.black,
+                              size: 34,
+                            ),
+                          ),
                   ),
                 ),
               ),
@@ -184,7 +208,8 @@ class BottomBarBackgroundPainter extends CustomPainter {
     const double thinStroke = 2.0;
 
     // ✅ แก้ไขจุดที่ 2: ปรับขนาดเกจ์ให้เล็กลงและบางลง
-    const double gap = 15.0; // เพิ่ม gap เพื่อบีบเกจ์เข้าไปข้างในมากขึ้น (เดิม 6.0)
+    const double gap =
+        15.0; // เพิ่ม gap เพื่อบีบเกจ์เข้าไปข้างในมากขึ้น (เดิม 6.0)
     const double trackWidth = 12.0; // ลดความหนาของแถบสีลง (เดิม 18.0)
 
     final double circleCenterX = h / 2;
@@ -193,46 +218,56 @@ class BottomBarBackgroundPainter extends CustomPainter {
     // ----------------------------------------------------------------------
     // 1. OUTER SHAPE: สี่เหลี่ยมขอบล่างตรงเป๊ะ
     // ----------------------------------------------------------------------
-    final double rOuterCircle = (h / 2) - (thickStroke / 2); 
-    
+    final double rOuterCircle = (h / 2) - (thickStroke / 2);
+
     // ขอบล่างต้องเสมอวงกลมเป๊ะๆ
-    final double pillOuterBottom = circleCenterY + rOuterCircle; 
-    
+    final double pillOuterBottom = circleCenterY + rOuterCircle;
+
     // ** ต้องตรงกับ pillHeight ด้านบนของคลาส BottomNavBar **
-    final double pillOuterHeight = 100.0; 
-    final double pillOuterTop = pillOuterBottom - pillOuterHeight; 
+    final double pillOuterHeight = 100.0;
+    final double pillOuterTop = pillOuterBottom - pillOuterHeight;
 
     Path outerCircle = Path()
-      ..addOval(Rect.fromCircle(center: Offset(circleCenterX, circleCenterY), radius: rOuterCircle));
+      ..addOval(
+        Rect.fromCircle(
+          center: Offset(circleCenterX, circleCenterY),
+          radius: rOuterCircle,
+        ),
+      );
 
     final Radius rightRadius = Radius.circular(pillOuterHeight / 2);
     Path outerPill = Path()
       ..addRRect(
         RRect.fromRectAndCorners(
           Rect.fromLTRB(
-              circleCenterX, 
-              pillOuterTop,
-              w - (thickStroke / 2),
-              pillOuterBottom
+            circleCenterX,
+            pillOuterTop,
+            w - (thickStroke / 2),
+            pillOuterBottom,
           ),
           topLeft: Radius.zero,
           bottomLeft: Radius.zero,
           topRight: rightRadius,
-          bottomRight: rightRadius
+          bottomRight: rightRadius,
         ),
       );
 
     Path outerPath = Path.combine(PathOperation.union, outerCircle, outerPill);
 
     canvas.drawShadow(outerPath, Colors.black45, 6.0, true);
-    canvas.drawPath(outerPath, Paint()..color = creamColor..style = PaintingStyle.fill);
     canvas.drawPath(
-      outerPath, 
+      outerPath,
+      Paint()
+        ..color = creamColor
+        ..style = PaintingStyle.fill,
+    );
+    canvas.drawPath(
+      outerPath,
       Paint()
         ..color = outlineColor
         ..style = PaintingStyle.stroke
         ..strokeWidth = thickStroke
-        ..strokeJoin = StrokeJoin.round 
+        ..strokeJoin = StrokeJoin.round,
     );
 
     // ----------------------------------------------------------------------
@@ -248,17 +283,47 @@ class BottomBarBackgroundPainter extends CustomPainter {
 
     double deg2Rad(double deg) => deg * math.pi / 180.0;
 
-    canvas.drawArc(Rect.fromCircle(center: Offset(circleCenterX, circleCenterY), radius: rThinOuter), deg2Rad(135), deg2Rad(270), false, thinBorderPaint);
-    canvas.drawArc(Rect.fromCircle(center: Offset(circleCenterX, circleCenterY), radius: rThinInner), deg2Rad(135), deg2Rad(270), false, thinBorderPaint);
+    canvas.drawArc(
+      Rect.fromCircle(
+        center: Offset(circleCenterX, circleCenterY),
+        radius: rThinOuter,
+      ),
+      deg2Rad(135),
+      deg2Rad(270),
+      false,
+      thinBorderPaint,
+    );
+    canvas.drawArc(
+      Rect.fromCircle(
+        center: Offset(circleCenterX, circleCenterY),
+        radius: rThinInner,
+      ),
+      deg2Rad(135),
+      deg2Rad(270),
+      false,
+      thinBorderPaint,
+    );
 
     canvas.drawLine(
-      Offset(circleCenterX + rThinInner * math.cos(deg2Rad(135)), circleCenterY + rThinInner * math.sin(deg2Rad(135))),
-      Offset(circleCenterX + rThinOuter * math.cos(deg2Rad(135)), circleCenterY + rThinOuter * math.sin(deg2Rad(135))),
+      Offset(
+        circleCenterX + rThinInner * math.cos(deg2Rad(135)),
+        circleCenterY + rThinInner * math.sin(deg2Rad(135)),
+      ),
+      Offset(
+        circleCenterX + rThinOuter * math.cos(deg2Rad(135)),
+        circleCenterY + rThinOuter * math.sin(deg2Rad(135)),
+      ),
       thinBorderPaint,
     );
     canvas.drawLine(
-      Offset(circleCenterX + rThinInner * math.cos(deg2Rad(45)), circleCenterY + rThinInner * math.sin(deg2Rad(45))),
-      Offset(circleCenterX + rThinOuter * math.cos(deg2Rad(45)), circleCenterY + rThinOuter * math.sin(deg2Rad(45))),
+      Offset(
+        circleCenterX + rThinInner * math.cos(deg2Rad(45)),
+        circleCenterY + rThinInner * math.sin(deg2Rad(45)),
+      ),
+      Offset(
+        circleCenterX + rThinOuter * math.cos(deg2Rad(45)),
+        circleCenterY + rThinOuter * math.sin(deg2Rad(45)),
+      ),
       thinBorderPaint,
     );
 
@@ -266,7 +331,10 @@ class BottomBarBackgroundPainter extends CustomPainter {
     // 3. GAUGE ARCS (คำนวณใหม่ตาม trackWidth ที่ลดลง)
     // ----------------------------------------------------------------------
     final double trackCenterRadius = (rThinOuter + rThinInner) / 2;
-    final Rect trackRect = Rect.fromCircle(center: Offset(circleCenterX, circleCenterY), radius: trackCenterRadius);
+    final Rect trackRect = Rect.fromCircle(
+      center: Offset(circleCenterX, circleCenterY),
+      radius: trackCenterRadius,
+    );
     final double actualTrackWidth = rThinOuter - rThinInner;
 
     Paint mkTrackPaint(Color c) => Paint()
@@ -274,17 +342,41 @@ class BottomBarBackgroundPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = actualTrackWidth;
 
-    canvas.drawArc(trackRect, deg2Rad(135), deg2Rad(45), false, mkTrackPaint(greenTrackColor));
-    canvas.drawArc(trackRect, deg2Rad(180), deg2Rad(180), false, mkTrackPaint(darkTrackColor));
-    canvas.drawArc(trackRect, deg2Rad(0), deg2Rad(45), false, mkTrackPaint(lightTrackColor));
+    canvas.drawArc(
+      trackRect,
+      deg2Rad(135),
+      deg2Rad(45),
+      false,
+      mkTrackPaint(greenTrackColor),
+    );
+    canvas.drawArc(
+      trackRect,
+      deg2Rad(180),
+      deg2Rad(180),
+      false,
+      mkTrackPaint(darkTrackColor),
+    );
+    canvas.drawArc(
+      trackRect,
+      deg2Rad(0),
+      deg2Rad(45),
+      false,
+      mkTrackPaint(lightTrackColor),
+    );
 
     Paint dividerPaint = Paint()
       ..color = Colors.white
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.5;
     canvas.drawLine(
-      Offset(circleCenterX + rThinInner * math.cos(deg2Rad(180)), circleCenterY + rThinInner * math.sin(deg2Rad(180))),
-      Offset(circleCenterX + rThinOuter * math.cos(deg2Rad(180)), circleCenterY + rThinOuter * math.sin(deg2Rad(180))),
+      Offset(
+        circleCenterX + rThinInner * math.cos(deg2Rad(180)),
+        circleCenterY + rThinInner * math.sin(deg2Rad(180)),
+      ),
+      Offset(
+        circleCenterX + rThinOuter * math.cos(deg2Rad(180)),
+        circleCenterY + rThinOuter * math.sin(deg2Rad(180)),
+      ),
       dividerPaint,
     );
   }

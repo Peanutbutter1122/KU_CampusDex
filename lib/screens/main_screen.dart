@@ -5,6 +5,7 @@ import 'map_screen.dart';
 import 'guided_route_screen.dart';
 import 'badge_screen.dart';
 import 'gallery_screen.dart';
+import 'navigation_screen.dart';
 
 class MainScreen extends StatefulWidget {
   final CameraOptions cameraOptions;
@@ -18,6 +19,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<bool> _isLoaded = [true, false, false, false, false];
+  AppWayPoint? _currentDestination;
 
   void _onTabTapped(int index) {
     setState(() {
@@ -40,9 +42,23 @@ class _MainScreenState extends State<MainScreen> {
       HomeScreen(
         onExploreTap: () => _onTabTapped(2),
       ), // 0: หน้าหลัก (มีภาพใหญ่ตรงกลาง)
-      const GuidedRouteScreen(), // 1: แนะนำเส้นทาง
+      GuidedRouteScreen(
+        onNavigateTap: (AppWayPoint wp) {
+          setState(() {
+            _currentDestination = wp;
+            _currentIndex = 2; // Switch to Map tab
+            _isLoaded[2] = true;
+          });
+        },
+      ), // 1: แนะนำเส้นทาง
       MapScreen(
         cameraOptions: widget.cameraOptions,
+        destination: _currentDestination,
+        onClearDestination: () {
+          setState(() {
+            _currentDestination = null;
+          });
+        },
       ), // 2: ตรงกลาง (แผนที่ / เริ่มเดินทางแบบอิสระ)
       const BadgeScreen(), // 3: เหรียญรางวัล
       const GalleryScreen(), // 4: แกลเลอรี่
