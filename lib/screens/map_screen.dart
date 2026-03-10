@@ -1,17 +1,21 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart' as geo;
 import 'package:http/http.dart' as http;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 import '../widgets/top_status_bar.dart';
 import '../widgets/bottom_nav_bar.dart';
-import 'navigation_screen.dart'; // for AppWayPoint
+import 'navigation_screen.dart';
 import 'camera_screen.dart';
+import '../data/badge_data.dart';
 
 class MapScreen extends StatefulWidget {
   final CameraOptions cameraOptions;
@@ -37,10 +41,15 @@ class _MapScreenState extends State<MapScreen> {
   PolylineAnnotation? _currentRouteAnnotation;
   CircleAnnotation? _destinationMarker;
 
+  // ป้องกัน _startNavigation ถูกเรียกพร้อมกันจากทั้ง initState และ didUpdateWidget
+  bool _navigationStarted = false;
+
   double _speed = 0.0;
   int _distanceMeters = 0;
   bool _isNearDestination = false;
   geo.Position? _currentPosition;
+
+  List<dynamic> _landmarkData = [];
 
   final String accessToken = const String.fromEnvironment("ACCESS_TOKEN");
 
@@ -48,6 +57,18 @@ class _MapScreenState extends State<MapScreen> {
   void initState() {
     super.initState();
     _checkPermissions();
+    _loadLandmarkData();
+  }
+
+  Future<void> _loadLandmarkData() async {
+    try {
+      final String response = await rootBundle.loadString(
+        'assets/data/ku_landmarks.json',
+      );
+      _landmarkData = json.decode(response);
+    } catch (e) {
+      debugPrint('Error loading landmark data: $e');
+    }
   }
 
   @override
@@ -55,8 +76,11 @@ class _MapScreenState extends State<MapScreen> {
     super.didUpdateWidget(oldWidget);
     if (widget.destination != oldWidget.destination) {
       if (widget.destination != null) {
+        // รีเซ็ต flag เพื่อให้ _startNavigation เรียกได้กับปลายทางใหม่
+        _navigationStarted = false;
         _startNavigation(widget.destination!);
       } else {
+        _navigationStarted = false;
         _stopNavigation();
       }
     }
@@ -82,13 +106,29 @@ class _MapScreenState extends State<MapScreen> {
     }
     if (permission == geo.LocationPermission.deniedForever) return;
 
-    if (widget.destination != null) {
+    // ตั้ง flag ก่อนเรียก ถ้า didUpdateWidget มาก่อนค่อยๆ skip
+    if (widget.destination != null && !_navigationStarted) {
       _startNavigation(widget.destination!);
     }
   }
 
   Future<void> _startNavigation(AppWayPoint dest) async {
     if (mapboxMap == null) return;
+    // ป้องกันการเรียกซ้ำพร้อมกัน
+    if (_navigationStarted) return;
+    _navigationStarted = true;
+
+    // หยุดนำทางเก่าก่อน (ล้างเส้นทางและ marker เดิม)
+    _positionStream?.cancel();
+    _positionStream = null;
+    if (_currentRouteAnnotation != null && polylineAnnotationManager != null) {
+      await polylineAnnotationManager?.delete(_currentRouteAnnotation!);
+      _currentRouteAnnotation = null;
+    }
+    if (_destinationMarker != null && circleAnnotationManager != null) {
+      await circleAnnotationManager?.delete(_destinationMarker!);
+      _destinationMarker = null;
+    }
 
     try {
       _currentPosition = await geo.Geolocator.getCurrentPosition(
@@ -97,7 +137,6 @@ class _MapScreenState extends State<MapScreen> {
       await _fetchAndDrawRoute(_currentPosition!, dest);
       await _addDestinationMarker(dest);
 
-      // Initially fly camera to show destination in 3D
       mapboxMap?.flyTo(
         CameraOptions(
           center: Point(coordinates: Position(dest.longitude, dest.latitude)),
@@ -121,15 +160,14 @@ class _MapScreenState extends State<MapScreen> {
           if (!mounted) return;
           setState(() {
             _currentPosition = position;
-            _speed = position.speed * 3.6; // m/s to km/h
+            _speed = position.speed * 3.6;
             _distanceMeters = geo.Geolocator.distanceBetween(
               position.latitude,
               position.longitude,
               dest.latitude,
               dest.longitude,
             ).toInt();
-            _isNearDestination =
-                _distanceMeters < 30; // 30 meters check-in radius
+            _isNearDestination = _distanceMeters < 30;
 
             mapboxMap?.flyTo(
               CameraOptions(
@@ -138,7 +176,7 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 zoom: 18,
                 bearing: position.heading,
-                pitch: 60, // 3D tilt
+                pitch: 60,
               ),
               MapAnimationOptions(duration: 1000),
             );
@@ -225,44 +263,328 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  // Check-in requires photo — opens camera, then uploads to Firebase Storage + Firestore
   void _checkIn() async {
     if (widget.destination == null) return;
     final user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      await FirebaseFirestore.instance.collection('users').doc(user.uid).update(
-        {
-          'level': FieldValue.increment(1),
-          'unlocked_places': FieldValue.arrayUnion([widget.destination!.id]),
-        },
+    if (user == null) return;
+
+    // เก็บ dest ไว้ใน local var ก่อน async เพื่อป้องกัน null ภายหลัง
+    final AppWayPoint dest = widget.destination!;
+
+    // Open camera
+    final String? photoPath = await Navigator.push<String>(
+      context,
+      MaterialPageRoute(
+        builder: (_) => CameraScreen(locationId: dest.id),
+      ),
+    );
+
+    if (photoPath == null) return; // User cancelled
+
+    // Show uploading indicator
+    if (!mounted) return;
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(color: Color(0xFF358C46)),
+                SizedBox(height: 16),
+                Text('กำลังบันทึก Check-in...'),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    try {
+      final now = DateTime.now();
+      final timestamp = now.millisecondsSinceEpoch;
+
+      // Upload photo to Firebase Storage (ชื่อไฟล์ใช้ timestamp เพื่อ overwrite ไม่ได้
+      // แต่แต่ละ check-in อาจเป็นรูปใหม่ — อัปโหลดรูปใหม่เสมอ)
+      final storageRef = FirebaseStorage.instance.ref().child(
+        'checkins/${user.uid}/${dest.id}_$timestamp.jpg',
       );
+
+      final uploadTask = storageRef.putFile(File(photoPath));
+      final taskSnapshot = await uploadTask;
+      final photoUrl = await taskSnapshot.ref.getDownloadURL();
+
+      // ── ใช้ map keyed by place ID เพื่อป้องกัน duplicate ──────────────────
+      // checked_in_places_map: { "FOOD_BAR01": { name, checkin_time, photo_url }, ... }
+      // การ check-in ซ้ำจะ update รูปและเวลาใหม่ แต่ไม่เพิ่ม entry ซ้ำ
+      final userRef = FirebaseFirestore.instance.collection('users').doc(user.uid);
+
+      final docSnap = await userRef.get();
+      final existing = docSnap.data() ?? {};
+      final Map<String, dynamic> placesMap = Map<String, dynamic>.from(
+        existing['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {},
+      );
+
+      final bool isNewPlace = !placesMap.containsKey(dest.id);
+
+      placesMap[dest.id] = {
+        'id': dest.id,
+        'name': dest.name,
+        'checkin_time': Timestamp.fromDate(now),
+        'photo_url': photoUrl,
+      };
+
+      // เพิ่ม level เฉพาะสถานที่ใหม่ที่ยังไม่เคย check-in
+      await userRef.set({
+        if (isNewPlace) 'level': FieldValue.increment(1),
+        'checked_in_places_map': placesMap,
+      }, SetOptions(merge: true));
+
+      // ── ประเมิน badge ที่ปลดล็อกใหม่ ─────────────────────────────────────
+      final Set<String> allCheckedIds = placesMap.keys.toSet();
+
+      final Set<String> alreadyUnlocked = Set<String>.from(
+        existing['unlocked_badges'] as List<dynamic>? ?? [],
+      );
+
+      final List<String> nowUnlocked =
+          AppBadge.evaluateUnlockedIds(allCheckedIds, BadgeData.all);
+
+      final List<String> newlyUnlocked = nowUnlocked
+          .where((id) => !alreadyUnlocked.contains(id))
+          .toList();
+
+      if (newlyUnlocked.isNotEmpty) {
+        await userRef.update({
+          'unlocked_badges': FieldValue.arrayUnion(newlyUnlocked),
+        });
+      }
+      // ─────────────────────────────────────────────────────────────────────
+
+      if (mounted) Navigator.pop(context); // close loading dialog
+
+      // แสดง badge ที่ปลดล็อกใหม่ (ถ้ามี)
+      if (newlyUnlocked.isNotEmpty && mounted) {
+        for (final badgeId in newlyUnlocked) {
+          final badge = BadgeData.all.firstWhere(
+            (b) => b.id == badgeId,
+            orElse: () => BadgeData.all.first,
+          );
+          if (!mounted) break;
+          await _showBadgeUnlockedDialog(badge);
+        }
+      }
+
+      // If landmark: show history popup
+      if (dest.isLandmark && mounted) {
+        final info = _landmarkData.firstWhere(
+          (e) => e['id'] == dest.id,
+          orElse: () => null,
+        );
+        if (info != null) {
+          await _showLandmarkHistoryDialog(info);
+        }
+      }
+
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'คุณได้ Check-in ที่ "${widget.destination!.name}" แล้ว 🎉',
+              isNewPlace
+                  ? 'Check-in ที่ "${dest.name}" สำเร็จ! 🎉'
+                  : 'อัปเดตรูป Check-in ที่ "${dest.name}" แล้ว! 📸',
             ),
             backgroundColor: Colors.green,
           ),
         );
       }
+    } catch (e) {
+      if (mounted) Navigator.pop(context); // close loading dialog
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('เกิดข้อผิดพลาด: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     }
+
     widget.onClearDestination?.call();
     _stopNavigation();
-    // Navigate to camera screen after check-in
-    if (mounted) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) =>
-              CameraScreen(locationId: widget.destination?.id ?? ''),
+  }
+
+  Future<void> _showLandmarkHistoryDialog(Map<String, dynamic> info) async {
+    await showDialog(
+      context: context,
+      builder: (ctx) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        child: Container(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height * 0.7,
+          ),
+          decoration: BoxDecoration(
+            color: const Color(0xFFFDF8ED),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: const Color(0xFF3B2213), width: 2),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: const BoxDecoration(
+                  color: Color(0xFFFFC107),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+                ),
+                child: Row(
+                  children: [
+                    const Text('🏛️', style: TextStyle(fontSize: 24)),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        info['title'],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Color(0xFF3B2213),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Flexible(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(20),
+                  child: Text(
+                    info['description'],
+                    style: const TextStyle(
+                      fontSize: 14,
+                      height: 1.6,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.pop(ctx),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF358C46),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                    child: const Text(
+                      'รับทราบ ✓',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      );
-    }
+      ),
+    );
+  }
+
+  Future<void> _showBadgeUnlockedDialog(AppBadge badge) async {
+    if (!mounted) return;
+    await showDialog(
+      context: context,
+      builder: (ctx) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        child: Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFFFDF8ED),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: badge.color, width: 3),
+          ),
+          padding: const EdgeInsets.all(28),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('🎉', style: const TextStyle(fontSize: 48)),
+              const SizedBox(height: 10),
+              const Text(
+                'ปลดล็อก Badge ใหม่!',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF3B2213),
+                ),
+              ),
+              const SizedBox(height: 16),
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: badge.color.withOpacity(0.15),
+                  border: Border.all(color: badge.color, width: 3),
+                ),
+                child: Icon(badge.icon, size: 44, color: badge.color),
+              ),
+              const SizedBox(height: 14),
+              Text(
+                badge.title,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: badge.color,
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                badge.description,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Color(0xFF3B2213),
+                ),
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: badge.color,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                  ),
+                  onPressed: () => Navigator.pop(ctx),
+                  child: const Text(
+                    'ยอดเยี่ยม! 🎊',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   _onMapCreated(MapboxMap mapboxMap) {
     this.mapboxMap = mapboxMap;
-    // NOTE: style is set via styleUri parameter in MapWidget - no loadStyleURI needed
 
     mapboxMap.compass.updateSettings(
       CompassSettings(marginTop: 100, marginRight: 20),
@@ -271,7 +593,6 @@ class _MapScreenState extends State<MapScreen> {
 
     _updateMapStyle();
 
-    // Tap a building to highlight it blue
     final tapBuildings = TapInteraction(StandardBuildings(), (feature, _) {
       mapboxMap.setFeatureStateForFeaturesetFeature(
         feature,
@@ -281,14 +602,12 @@ class _MapScreenState extends State<MapScreen> {
     });
     mapboxMap.addInteraction(tapBuildings);
 
-    // Long tap to clear all highlights
     mapboxMap.addInteraction(
       LongTapInteraction.onMap((_) {
         mapboxMap.resetFeatureStatesForFeatureset(StandardBuildings());
       }),
     );
 
-    // Enable the location puck (blue dot showing user's position)
     mapboxMap.location.updateSettings(
       LocationComponentSettings(
         enabled: true,
@@ -307,14 +626,12 @@ class _MapScreenState extends State<MapScreen> {
     mapboxMap?.style.setStyleImportConfigProperties('basemap', {
       'lightPreset': 'day',
       'theme': 'default',
-      'colorBuildingHighlight':
-          'hsl(0, 94%, 50%)', // Red highlight for destination
+      'colorBuildingHighlight': 'hsl(0, 94%, 50%)',
       'show3dBuildings': true,
     });
   }
 
   _onStyleLoaded(StyleLoadedEventData data) async {
-    // Enable 3D buildings in the Standard style
     try {
       await mapboxMap?.style.setStyleImportConfigProperty(
         'basemap',
@@ -365,7 +682,6 @@ class _MapScreenState extends State<MapScreen> {
                       if (_isNearDestination) {
                         _checkIn();
                       } else {
-                        // Normally centers camera to current location
                         if (_currentPosition != null && mapboxMap != null) {
                           mapboxMap!.flyTo(
                             CameraOptions(

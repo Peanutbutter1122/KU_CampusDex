@@ -5,12 +5,14 @@ class AppWayPoint {
   final String name;
   final double latitude;
   final double longitude;
+  final bool isLandmark;
 
   const AppWayPoint({
     required this.id,
     required this.name,
     required this.latitude,
     required this.longitude,
+    this.isLandmark = false,
   });
 }
 
@@ -62,12 +64,23 @@ class NavigationScreen extends StatelessWidget {
                   style: const TextStyle(color: Colors.white),
                 ),
               ),
-              title: Text(
-                wp.name,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: brownColor,
-                ),
+              title: Row(
+                children: [
+                  if (wp.isLandmark)
+                    const Padding(
+                      padding: EdgeInsets.only(right: 6),
+                      child: Text('🏛️', style: TextStyle(fontSize: 16)),
+                    ),
+                  Expanded(
+                    child: Text(
+                      wp.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: brownColor,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               trailing: IconButton(
                 icon: const Icon(Icons.navigation, color: Colors.blue),

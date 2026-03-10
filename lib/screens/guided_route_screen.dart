@@ -42,9 +42,13 @@ class GuidedRouteScreen extends StatelessWidget {
           List<String> unlockedPlaces = [];
           if (snapshot.hasData && snapshot.data!.exists) {
             final data = snapshot.data!.data() as Map<String, dynamic>;
-            final placesDynamic =
-                data['unlocked_places'] as List<dynamic>? ?? [];
-            unlockedPlaces = placesDynamic.map((e) => e.toString()).toList();
+            final checkedInRaw =
+                data['checked_in_places'] as List<dynamic>? ?? [];
+            unlockedPlaces = checkedInRaw
+                .whereType<Map<String, dynamic>>()
+                .map((e) => e['id'] as String? ?? '')
+                .where((id) => id.isNotEmpty)
+                .toList();
           }
 
           return ListView.builder(

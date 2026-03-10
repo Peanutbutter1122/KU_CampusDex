@@ -40,7 +40,13 @@ class _MainScreenState extends State<MainScreen> {
     // หน้าต่างๆ ที่กดได้จาก BottomNavigationBar
     final List<Widget> pages = [
       HomeScreen(
-        onExploreTap: () => _onTabTapped(2),
+        onExploreTap: (AppWayPoint wp) {
+          setState(() {
+            _currentDestination = wp;
+            _currentIndex = 2; // Switch to Map tab
+            _isLoaded[2] = true;
+          });
+        },
       ), // 0: หน้าหลัก (มีภาพใหญ่ตรงกลาง)
       GuidedRouteScreen(
         onNavigateTap: (AppWayPoint wp) {

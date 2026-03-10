@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:intl/intl.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -14,6 +15,9 @@ class GalleryScreen extends StatefulWidget {
 
 class _GalleryScreenState extends State<GalleryScreen> {
   List<dynamic> landmarkData = [];
+
+  static const Color brownColor = Color(0xFF3B2213);
+  static const Color creamBg = Color(0xFFFDF8ED);
 
   @override
   void initState() {
@@ -26,60 +30,259 @@ class _GalleryScreenState extends State<GalleryScreen> {
       final String response = await rootBundle.loadString(
         'assets/data/ku_landmarks.json',
       );
-      final data = await json.decode(response);
-      setState(() {
-        landmarkData = data;
-      });
+      final data = json.decode(response);
+      setState(() => landmarkData = data);
     } catch (e) {
       debugPrint('Error loading json: $e');
     }
   }
 
+  String _relativeTime(DateTime dateTime) {
+    final diff = DateTime.now().difference(dateTime);
+    if (diff.inMinutes < 60) {
+      return '${diff.inMinutes} นาทีที่แล้ว';
+    } else if (diff.inHours < 24) {
+      return '${diff.inHours} ชั่วโมงที่แล้ว';
+    } else {
+      return '${diff.inDays} วันที่แล้ว';
+    }
+  }
+
+  String _thaiDate(DateTime dt) {
+    // Convert to Thai Buddhist Era year
+    final buddhistYear = dt.year + 543;
+    const thaiMonths = [
+      '',
+      'มกราคม',
+      'กุมภาพันธ์',
+      'มีนาคม',
+      'เมษายน',
+      'พฤษภาคม',
+      'มิถุนายน',
+      'กรกฎาคม',
+      'สิงหาคม',
+      'กันยายน',
+      'ตุลาคม',
+      'พฤศจิกายน',
+      'ธันวาคม',
+    ];
+    final time = DateFormat('HH:mm').format(dt);
+    return '${dt.day} ${thaiMonths[dt.month]} $buddhistYear เวลา $time น.';
+  }
+
+  void _showPhotoDetail(BuildContext context, Map<String, dynamic> checkin) {
+    final id = checkin['id'] as String? ?? '';
+    final name = checkin['name'] as String? ?? '';
+    final photoUrl = checkin['photo_url'] as String? ?? '';
+    final timestamp = checkin['checkin_time'];
+    DateTime? checkinTime;
+    if (timestamp != null) {
+      checkinTime = (timestamp as dynamic).toDate() as DateTime;
+    }
+
+    final info = landmarkData.firstWhere(
+      (e) => e['id'] == id,
+      orElse: () => null,
+    );
+
+    showDialog(
+      context: context,
+      builder: (ctx) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.all(16),
+        child: Stack(
+          clipBehavior: Clip.none,
+          alignment: Alignment.center,
+          children: [
+            Container(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(ctx).size.height * 0.85,
+                maxWidth: MediaQuery.of(ctx).size.width * 0.95,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: brownColor, width: 2),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Photo
+                  ClipRRect(
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(18),
+                    ),
+                    child: photoUrl.isNotEmpty
+                        ? CachedNetworkImage(
+                            imageUrl: photoUrl,
+                            fit: BoxFit.cover,
+                            height: 240,
+                            width: double.infinity,
+                            placeholder: (ctx, url) => Container(
+                              height: 240,
+                              color: Colors.grey[200],
+                              child: const Center(
+                                child: CircularProgressIndicator(),
+                              ),
+                            ),
+                            errorWidget: (ctx, url, e) => Container(
+                              height: 240,
+                              color: Colors.grey[300],
+                              child: const Icon(
+                                Icons.image_not_supported,
+                                size: 64,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          )
+                        : Container(
+                            height: 240,
+                            color: Colors.grey[300],
+                            child: const Icon(
+                              Icons.camera_alt,
+                              size: 64,
+                              color: Colors.grey,
+                            ),
+                          ),
+                  ),
+                  // Info
+                  Flexible(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Place name
+                          Text(
+                            name,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: brownColor,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+
+                          // Checkin time
+                          if (checkinTime != null) ...[
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 14,
+                                vertical: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFDF8ED),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: const Color(0xFFDCA930),
+                                  width: 1.5,
+                                ),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.calendar_today,
+                                        size: 16,
+                                        color: brownColor,
+                                      ),
+                                      const SizedBox(width: 8),
+                                      Text(
+                                        _thaiDate(checkinTime),
+                                        style: const TextStyle(
+                                          fontSize: 13,
+                                          color: brownColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 6),
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.access_time,
+                                        size: 16,
+                                        color: Colors.grey,
+                                      ),
+                                      const SizedBox(width: 8),
+                                      Text(
+                                        _relativeTime(checkinTime),
+                                        style: const TextStyle(
+                                          fontSize: 13,
+                                          color: Color(0xFF358C46),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                          ],
+
+                          // Landmark description (if available)
+                          if (info != null && info['description'] != null) ...[
+                            const Divider(),
+                            const SizedBox(height: 8),
+                            const Row(
+                              children: [
+                                Text('🏛️', style: TextStyle(fontSize: 16)),
+                                SizedBox(width: 8),
+                                Text(
+                                  'ประวัติสถานที่',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: brownColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              info['description'],
+                              style: const TextStyle(
+                                fontSize: 13,
+                                height: 1.6,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Close button
+            Positioned(
+              top: -12,
+              right: -12,
+              child: GestureDetector(
+                onTap: () => Navigator.pop(ctx),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: brownColor,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 2),
+                  ),
+                  padding: const EdgeInsets.all(8),
+                  child: const Icon(Icons.close, color: Colors.white, size: 20),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    const Color brownColor = Color(0xFF3B2213);
-    const Color creamBg = Color(0xFFFDF8ED);
-
-    // Dummy gallery items
-    final List<Map<String, String>> photos = [
-      {
-        'id': 'landmark_sam_burapajarn',
-        'url':
-            'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=60',
-        'title': 'อนุสาวรีย์ สามบูรพาจารย์',
-      },
-      {
-        'id': 'landmark_pra_pirun',
-        'url':
-            'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=500&q=60',
-        'title': 'พระพิรุณทรงนาค',
-      },
-      {
-        'id': 'landmark_auditorium',
-        'url':
-            'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=500&q=60',
-        'title': 'หอประชุมใหญ่',
-      },
-      {
-        'id': 'landmark_50th_anniversary',
-        'url':
-            'https://images.unsplash.com/photo-1568228189815-1a2f641a029c?auto=format&fit=crop&w=500&q=60',
-        'title': 'อาคารสารนิเทศ 50 ปี',
-      },
-      {
-        'id': 'landmark_suwanchart_pool',
-        'url':
-            'https://images.unsplash.com/photo-1555181126-cf46a03827c0?auto=format&fit=crop&w=500&q=60',
-        'title': 'สระสุวรรณชาด',
-      },
-      {
-        'id': 'landmark_60th_monument',
-        'url':
-            'https://images.unsplash.com/photo-1620216669930-babbf7b0282b?auto=format&fit=crop&w=500&q=60',
-        'title': 'หออนุสรณ์ 60 ปี มก.',
-      },
-    ];
-
     return Scaffold(
       backgroundColor: creamBg,
       appBar: AppBar(
@@ -106,226 +309,156 @@ class _GalleryScreenState extends State<GalleryScreen> {
             }
 
             int level = 0;
-            List<String> unlockedPlaces = [];
+            List<Map<String, dynamic>> checkedInPlaces = [];
 
             if (snapshot.hasData && snapshot.data!.exists) {
               final data = snapshot.data!.data() as Map<String, dynamic>;
               level = data['level'] ?? 0;
-              final placesDynamic =
-                  data['unlocked_places'] as List<dynamic>? ?? [];
-              unlockedPlaces = placesDynamic.map((e) => e.toString()).toList();
+              // อ่านจาก Map (key = placeId) เพื่อป้องกัน entry ซ้ำ
+              final rawMap = data['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {};
+              checkedInPlaces = rawMap.values
+                  .whereType<Map<String, dynamic>>()
+                  .toList()
+                  .reversed
+                  .toList(); // latest first by insertion order
             }
-
-            // Filter photos based on unlocked places
-            final unlockedPhotos = photos
-                .where((p) => unlockedPlaces.contains(p['id']))
-                .toList();
 
             return Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Text(
-                    'Level: $level',
+                    'Level: $level · ${checkedInPlaces.length} สถานที่',
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: brownColor,
                     ),
                   ),
                 ),
                 Expanded(
-                  child: unlockedPhotos.isEmpty
+                  child: checkedInPlaces.isEmpty
                       ? const Center(
-                          child: Text(
-                            'ยังไม่มีสถานที่ที่ปลดล็อก\nออกไปสำรวจกันเลย!',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('📷', style: TextStyle(fontSize: 48)),
+                              SizedBox(height: 12),
+                              Text(
+                                'ยังไม่มีสถานที่ที่ Check-in\nออกไปสำรวจและถ่ายรูปกันเลย!',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
                           ),
                         )
                       : GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisSpacing: 16,
-                                crossAxisSpacing: 16,
-                                childAspectRatio:
-                                    0.8, // Fixed ratio to prevent infinite layout constraints
+                                mainAxisSpacing: 12,
+                                crossAxisSpacing: 12,
+                                childAspectRatio: 0.85,
                               ),
-                          itemCount: unlockedPhotos.length,
+                          itemCount: checkedInPlaces.length,
                           itemBuilder: (context, index) {
-                            final photo = unlockedPhotos[index];
+                            final checkin = checkedInPlaces[index];
+                            final photoUrl =
+                                checkin['photo_url'] as String? ?? '';
+                            final name = checkin['name'] as String? ?? '';
+                            final timestamp = checkin['checkin_time'];
+                            DateTime? checkinTime;
+                            if (timestamp != null) {
+                              checkinTime =
+                                  (timestamp as dynamic).toDate() as DateTime;
+                            }
 
                             return GestureDetector(
-                              behavior: HitTestBehavior.opaque,
-                              onTap: () {
-                                // Find landmark info based on id
-                                final info = landmarkData.firstWhere(
-                                  (element) => element['id'] == photo['id'],
-                                  orElse: () => null,
-                                );
-
-                                showDialog(
-                                  context: context,
-                                  builder: (context) => Dialog(
-                                    backgroundColor: Colors.transparent,
-                                    insetPadding: const EdgeInsets.all(16),
-                                    child: Stack(
-                                      clipBehavior: Clip.none,
-                                      alignment: Alignment.center,
-                                      children: [
-                                        Container(
-                                          constraints: BoxConstraints(
-                                            maxHeight:
-                                                MediaQuery.of(
-                                                  context,
-                                                ).size.height *
-                                                0.8, // Increased slightly for text
-                                            maxWidth:
-                                                MediaQuery.of(
-                                                  context,
-                                                ).size.width *
-                                                0.9,
-                                          ),
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.circular(
-                                              16,
-                                            ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    const BorderRadius.vertical(
-                                                      top: Radius.circular(16),
-                                                    ),
-                                                child: CachedNetworkImage(
-                                                  imageUrl: photo['url']!,
-                                                  fit: BoxFit.cover,
-                                                  height: 250,
-                                                  width: double.infinity,
-                                                  placeholder: (context, url) =>
-                                                      const Center(
-                                                        child:
-                                                            CircularProgressIndicator(),
-                                                      ),
-                                                  errorWidget:
-                                                      (context, url, error) =>
-                                                          const Icon(
-                                                            Icons.error,
-                                                          ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child: SingleChildScrollView(
-                                                  padding: const EdgeInsets.all(
-                                                    16.0,
-                                                  ),
-                                                  child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Text(
-                                                        photo['title']!,
-                                                        style: const TextStyle(
-                                                          fontSize: 20,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color: brownColor,
-                                                        ),
-                                                      ),
-                                                      const SizedBox(height: 8),
-                                                      if (info != null &&
-                                                          info['description'] !=
-                                                              null)
-                                                        Text(
-                                                          info['description'],
-                                                          style:
-                                                              const TextStyle(
-                                                                fontSize: 14,
-                                                                height: 1.5,
-                                                                color: Colors
-                                                                    .black87,
-                                                              ),
-                                                        ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Positioned(
-                                          top: -10,
-                                          right: -10,
-                                          child: GestureDetector(
-                                            onTap: () => Navigator.pop(context),
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                color: brownColor,
-                                                shape: BoxShape.circle,
-                                                border: Border.all(
-                                                  color: Colors.white,
-                                                  width: 2,
-                                                ),
-                                              ),
-                                              padding: const EdgeInsets.all(8),
-                                              child: const Icon(
-                                                Icons.close,
-                                                color: Colors.white,
-                                                size: 20,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                );
-                              },
+                              onTap: () => _showPhotoDetail(context, checkin),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(16),
                                 child: Stack(
-                                  alignment: Alignment.bottomCenter,
+                                  fit: StackFit.expand,
                                   children: [
-                                    CachedNetworkImage(
-                                      imageUrl: photo['url']!,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      placeholder: (context, url) => Container(
-                                        color: Colors.grey[300],
-                                        child: const Center(
-                                          child: CircularProgressIndicator(),
+                                    // Photo
+                                    photoUrl.isNotEmpty
+                                        ? CachedNetworkImage(
+                                            imageUrl: photoUrl,
+                                            fit: BoxFit.cover,
+                                            placeholder: (ctx, url) => Container(
+                                              color: Colors.grey[300],
+                                              child: const Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              ),
+                                            ),
+                                            errorWidget: (ctx, url, e) =>
+                                                Container(
+                                                  color: Colors.grey[300],
+                                                  child: const Icon(
+                                                    Icons.image_not_supported,
+                                                  ),
+                                                ),
+                                          )
+                                        : Container(
+                                            color: Colors.grey[300],
+                                            child: const Icon(
+                                              Icons.camera_alt,
+                                              size: 40,
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Container(
+                                        width: double.infinity,
+                                        padding: const EdgeInsets.only(
+                                          left: 10,
+                                          right: 10,
+                                          top: 8,
+                                          bottom: 12, // เพิ่มจาก 8 → 12 เพื่อไม่ให้ตัวเลขจม
                                         ),
-                                      ),
-                                      errorWidget: (context, url, error) =>
-                                          const Icon(Icons.error),
-                                    ),
-                                    Container(
-                                      width: double.infinity,
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 8,
-                                        horizontal: 12,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [
-                                            Colors.black.withOpacity(0.8),
-                                            Colors.transparent,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Colors.black.withOpacity(0.85),
+                                              Colors.transparent,
+                                            ],
+                                            begin: Alignment.bottomCenter,
+                                            end: Alignment.topCenter,
+                                          ),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              name,
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 12,
+                                              ),
+                                            ),
+                                            if (checkinTime != null)
+                                              Text(
+                                                _relativeTime(checkinTime),
+                                                maxLines: 1,
+                                                overflow: TextOverflow.ellipsis,
+                                                style: const TextStyle(
+                                                  color: Colors.greenAccent,
+                                                  fontSize: 11,
+                                                  height: 1.4,
+                                                ),
+                                              ),
                                           ],
-                                          begin: Alignment.bottomCenter,
-                                          end: Alignment.topCenter,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        photo['title']!,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),

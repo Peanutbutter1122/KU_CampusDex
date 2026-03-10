@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../data/badge_data.dart';
 
 class RankingScreen extends StatelessWidget {
   const RankingScreen({super.key});
@@ -7,51 +10,6 @@ class RankingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const Color brownColor = Color(0xFF3B2213);
     const Color creamBg = Color(0xFFFDF8ED);
-
-    final List<Map<String, dynamic>> ranks = [
-      {
-        'name': 'พี่เนียนปี 4',
-        'level': 99,
-        'exp': 15000,
-        'avatar': 'https://i.pravatar.cc/150?img=68',
-      },
-      {
-        'name': 'Kasetsart GUY',
-        'level': 12,
-        'exp': 3200,
-        'avatar': 'https://i.pravatar.cc/150?img=11',
-      },
-      {
-        'name': 'Nong Freshy',
-        'level': 8,
-        'exp': 1500,
-        'avatar': 'https://i.pravatar.cc/150?img=5',
-      },
-      {
-        'name': 'KU Runner',
-        'level': 7,
-        'exp': 1200,
-        'avatar': 'https://i.pravatar.cc/150?img=12',
-      },
-      {
-        'name': 'Late to Class',
-        'level': 5,
-        'exp': 800,
-        'avatar': 'https://i.pravatar.cc/150?img=33',
-      },
-      {
-        'name': 'Cat Lover',
-        'level': 3,
-        'exp': 450,
-        'avatar': 'https://i.pravatar.cc/150?img=47',
-      },
-      {
-        'name': 'Sleepy Student',
-        'level': 2,
-        'exp': 200,
-        'avatar': 'https://i.pravatar.cc/150?img=59',
-      },
-    ];
 
     return Scaffold(
       backgroundColor: creamBg,
@@ -63,76 +21,206 @@ class RankingScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
+        leading: const BackButton(color: brownColor),
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: ranks.length,
-        itemBuilder: (context, index) {
-          final user = ranks[index];
-          final bool isTop3 = index < 3;
-          final Color cardColor = isTop3
-              ? (index == 0
-                    ? const Color(0xFFFFD700)
-                    : index == 1
-                    ? const Color(0xFFC0C0C0)
-                    : const Color(0xFFCD7F32))
-              : Colors.white;
+      body: FutureBuilder<QuerySnapshot>(
+        future: FirebaseFirestore.instance
+            .collection('users')
+            .orderBy('level', descending: true)
+            .get(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Center(child: Text('เกิดข้อผิดพลาด: ${snapshot.error}'));
+          }
+          final docs = snapshot.data?.docs ?? [];
+          if (docs.isEmpty) {
+            return const Center(
+              child: Text(
+                'ยังไม่มีนักสำรวจในระบบ\nออกไปสำรวจกันเลย!',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+              ),
+            );
+          }
 
-          return Card(
-            elevation: isTop3 ? 8 : 2,
-            margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-              side: isTop3
-                  ? const BorderSide(color: brownColor, width: 2)
-                  : BorderSide.none,
-            ),
-            color: isTop3 ? cardColor.withOpacity(0.3) : Colors.white,
-            child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 8,
-              ),
-              leading: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    '#${index + 1}',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: isTop3 ? cardColor : Colors.grey,
-                      shadows: isTop3
-                          ? [const Shadow(blurRadius: 2, color: Colors.black45)]
-                          : null,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  CircleAvatar(
-                    radius: 25,
-                    backgroundImage: NetworkImage(user['avatar']),
-                  ),
-                ],
-              ),
-              title: Text(
-                user['name'],
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                  color: brownColor,
+          final currentUid = FirebaseAuth.instance.currentUser?.uid;
+
+          return ListView.builder(
+            padding: const EdgeInsets.all(16),
+            itemCount: docs.length,
+            itemBuilder: (context, index) {
+              final data = docs[index].data() as Map<String, dynamic>;
+              final uid = docs[index].id;
+              final name =
+                  data['displayName'] as String? ??
+                  data['email'] as String? ??
+                  'ผู้สำรวจ';
+              final level = data['level'] as int? ?? 0;
+              final isMe = uid == currentUid;
+              final isTop3 = index < 3;
+              final Color medalColor = index == 0
+                  ? const Color(0xFFFFD700)
+                  : index == 1
+                  ? const Color(0xFFC0C0C0)
+                  : const Color(0xFFCD7F32);
+
+              // Badge icons — ดึงจาก Firestore
+              final List<String> unlockedBadgeIds = List<String>.from(
+                data['unlocked_badges'] as List<dynamic>? ?? [],
+              );
+              // หา AppBadge สำหรับแต่ละ ID ที่ปลดล็อก (สูงสุด 5 อัน)
+              final List<AppBadge> shownBadges = BadgeData.all
+                  .where((b) => unlockedBadgeIds.contains(b.id))
+                  .take(5)
+                  .toList();
+
+              return Card(
+                elevation: isTop3 ? 8 : 2,
+                margin: const EdgeInsets.only(bottom: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  side: isMe
+                      ? const BorderSide(color: Color(0xFF358C46), width: 3)
+                      : isTop3
+                      ? const BorderSide(color: brownColor, width: 2)
+                      : BorderSide.none,
                 ),
-              ),
-              subtitle: Text(
-                'Level ${user['level']} • EXP: ${user['exp']}',
-                style: const TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.bold,
+                color: isTop3
+                    ? medalColor.withOpacity(0.15)
+                    : isMe
+                    ? const Color(0xFFE8F5E9)
+                    : Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 12,
+                  ),
+                  child: Row(
+                    children: [
+                      // Rank + Avatar
+                      Text(
+                        isTop3 ? ['🥇', '🥈', '🥉'][index] : '#${index + 1}',
+                        style: TextStyle(
+                          fontSize: isTop3 ? 24 : 18,
+                          fontWeight: FontWeight.bold,
+                          color: isTop3 ? medalColor : Colors.grey,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Container(
+                        width: 44,
+                        height: 44,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: isMe ? const Color(0xFF358C46) : brownColor,
+                            width: 2,
+                          ),
+                        ),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/character.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+
+                      // Name + level + badges
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    name,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15,
+                                      color: brownColor,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                if (isMe)
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                      vertical: 2,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF358C46),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: const Text(
+                                      'คุณ',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              'Level $level  •  ${unlockedBadgeIds.length} badge',
+                              style: const TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+
+                            // Badge icons row
+                            if (shownBadges.isNotEmpty) ...[
+                              const SizedBox(height: 6),
+                              Row(
+                                children: shownBadges.map((b) {
+                                  return Padding(
+                                    padding: const EdgeInsets.only(right: 4),
+                                    child: Tooltip(
+                                      message: b.title,
+                                      child: Container(
+                                        width: 26,
+                                        height: 26,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: b.color.withOpacity(0.15),
+                                          border: Border.all(
+                                            color: b.color,
+                                            width: 1.5,
+                                          ),
+                                        ),
+                                        child: Icon(
+                                          b.icon,
+                                          size: 13,
+                                          color: b.color,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
+
+                      // Star for top 3
+                      if (isTop3)
+                        Icon(Icons.star, color: medalColor, size: 28),
+                    ],
+                  ),
                 ),
-              ),
-              trailing: isTop3
-                  ? const Icon(Icons.star, color: Colors.amber, size: 30)
-                  : null,
-            ),
+              );
+            },
           );
         },
       ),

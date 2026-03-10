@@ -3,7 +3,6 @@ import '../screens/navigation_screen.dart';
 
 class KuCampusData {
   static final List<Map<String, dynamic>> routes = [
-    
     // =========================================================
     // กลุ่มที่ 1: คณะและภาควิชา (Faculties & Departments)
     // =========================================================
@@ -149,7 +148,8 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'FISH19',
-          name: 'อาคารภาควิชาเพาะเลี้ยงสัตวน้ำและภาควิชาการจัดการประมง (อาคารเมฆบุญพรามหมณ์)',
+          name:
+              'อาคารภาควิชาเพาะเลี้ยงสัตวน้ำและภาควิชาการจัดการประมง (อาคารเมฆบุญพรามหมณ์)',
           latitude: 13.854900,
           longitude: 100.567184,
         ),
@@ -250,7 +250,8 @@ class KuCampusData {
       'waypoints': [
         AppWayPoint(
           id: 'ARCH01',
-          name: 'โครงการก่อสร้างอาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโลยี (คณะสถาปัตยกรรมศาสตร์)',
+          name:
+              'โครงการก่อสร้างอาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโลยี (คณะสถาปัตยกรรมศาสตร์)',
           latitude: 13.853578,
           longitude: 100.568048,
         ),
@@ -285,7 +286,8 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'EDU02',
-          name: 'อาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโนโลยี (โครงการก่อสร้าง)',
+          name:
+              'อาคารปฏิบัติการรวมด้านนวัตกรรมการออกแบบอุตสาหกรรมและเทคโนโลยี (โครงการก่อสร้าง)',
           latitude: 13.851428,
           longitude: 100.570251,
         ),
@@ -480,7 +482,8 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'AGR15',
-          name: 'อาคารวิจัยและพัฒนา(สถาบันค้นคว้าและพัฒนาระบบนิเวศเกษตร ชั้น3ห้อง313,316)',
+          name:
+              'อาคารวิจัยและพัฒนา(สถาบันค้นคว้าและพัฒนาระบบนิเวศเกษตร ชั้น3ห้อง313,316)',
           latitude: 13.854052,
           longitude: 100.572274,
         ),
@@ -744,7 +747,7 @@ class KuCampusData {
         ),
       ],
     },
-// 8. คณะมนุษยศาสตร์
+    // 8. คณะมนุษยศาสตร์
     {
       'title': 'คณะมนุษยศาสตร์',
       'desc': 'สถานที่จัดการเรียนการสอน คณะมนุษยศาสตร์',
@@ -1145,7 +1148,8 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'SCI14',
-          name: 'อาคารโรงงานต้นแบบ ผลิตเครื่องดื่มนมเปรี้ยวคุณภาพสูง จากถั่วเหลือง',
+          name:
+              'อาคารโรงงานต้นแบบ ผลิตเครื่องดื่มนมเปรี้ยวคุณภาพสูง จากถั่วเหลือง',
           latitude: 13.845737,
           longitude: 100.571682,
         ),
@@ -1287,15 +1291,9 @@ class KuCampusData {
       'waypoints': [
         AppWayPoint(
           id: 'VET01',
-          name: 'โรงอาหารคณะ สัตวแพทยศาสตร์',
+          name: 'โรงอาหารคณะ สัตวแพทยศาสตร์ (บาร์หมา)',
           latitude: 13.843778,
           longitude: 100.577427,
-        ),
-        AppWayPoint(
-          id: 'VET02',
-          name: 'สระสุวรรณชาด',
-          latitude: 13.844102,
-          longitude: 100.576842,
         ),
         AppWayPoint(
           id: 'VET03',
@@ -1382,7 +1380,7 @@ class KuCampusData {
         ),
       ],
     },
-// =========================================================
+    // =========================================================
     // กลุ่มสถาบันค้นคว้าและศูนย์วิจัย (Research Institutes)
     // =========================================================
 
@@ -1467,13 +1465,15 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'RES_KAPI03',
-          name: 'สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 1',
+          name:
+              'สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 1',
           latitude: 13.853051,
           longitude: 100.572343,
         ),
         AppWayPoint(
           id: 'RES_KAPI04',
-          name: 'สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 2',
+          name:
+              'สถาบันค้นคว้าและพ้ฒนาผลิตผลทางการเกษตรและอุตสาหกกมเกษตร เรือนเพาะชำ 2',
           latitude: 13.852858,
           longitude: 100.572359,
         ),
@@ -1926,6 +1926,12 @@ class KuCampusData {
           name: 'อาคารชมรมรักบี้',
           latitude: 13.845999,
           longitude: 100.566930,
+        ),
+        AppWayPoint(
+          id: 'SPO21',
+          name: 'สระสุวรรณชาด',
+          latitude: 13.844102,
+          longitude: 100.576842,
         ),
       ],
     },
@@ -2391,7 +2397,8 @@ class KuCampusData {
         ),
         AppWayPoint(
           id: 'CEN_ADM04',
-          name: 'อาคารระพีสาคริก (อาคารใช้งานร่วมกัน กองกิจการนิสิตและสำนักทะเบียนและประมวลผล)',
+          name:
+              'อาคารระพีสาคริก (อาคารใช้งานร่วมกัน กองกิจการนิสิตและสำนักทะเบียนและประมวลผล)',
           latitude: 13.847653,
           longitude: 100.569553,
         ),
@@ -2542,5 +2549,183 @@ class KuCampusData {
       ],
     },
 
+    // =========================================================
+    // สถานที่สำคัญและประวัติศาสตร์ (Landmarks & Historical Sites)
+    // =========================================================
+
+    // 29. สถานที่สำคัญ มก.
+    {
+      'title': 'สถานที่สำคัญ',
+      'desc': 'อนุสาวรีย์และสถานที่สำคัญทางประวัติศาสตร์ของมหาวิทยาลัย',
+      'icon': Icons.account_balance, // หรือใช้ Icons.star ก็ได้ครับ
+      'color': const Color(0xFFFFC107), // สีเหลืองทอง สื่อถึงความทรงคุณค่า
+      'progress': 0.0,
+      'waypoints': [
+        AppWayPoint(
+          id: 'LND_01',
+          name: 'อนุสาวรีย์สามบูรพาจารย์ (สามเสือเกษตร)',
+          latitude: 13.842212,
+          longitude: 100.573055,
+          isLandmark: true,
+        ),
+        AppWayPoint(
+          id: 'LND_02',
+          name: 'พระพิรุณทรงนาค (หน้าอาคารสุวรรณวาจกกสิกิจ)',
+          latitude: 13.841037,
+          longitude: 100.575473,
+          isLandmark: true,
+        ),
+        AppWayPoint(
+          id: 'LND_03',
+          name: 'นนทรีทรงปลูก (หน้าหอประชุมใหญ่ มก.)',
+          latitude: 13.841137,
+          longitude: 100.575115,
+          isLandmark: true,
+        ),
+        AppWayPoint(
+          id: 'LND_04',
+          name: 'หออนุสรณ์ 60 ปี มหาวิทยาลัยเกษตรศาสตร์',
+          latitude: 13.847147,
+          longitude: 100.571677,
+          isLandmark: true,
+        ),
+        AppWayPoint(
+          id: 'LND_05',
+          name: 'แคปซูลเวลา (Time Capsule)',
+          latitude: 13.84750,
+          longitude: 100.57175,
+          isLandmark: true,
+        ),
+      ],
+    },
+    // =========================================================
+    // วิถีเด็กเกษตร (Lifestyle & Food)
+    // =========================================================
+
+    // 30. แหล่งของกินยอดฮิต (KU Cafeterias & Food)
+    {
+      'title': 'แหล่งของกินยอดฮิต (บาร์ต่างๆ)',
+      'desc':
+          'บาร์ใหม่ บาร์ใหม่กว่า KU Avenue และร้านสะดวกซื้อที่เด็กเกษตรต้องรู้',
+      'icon': Icons.restaurant,
+      'color': const Color(0xFFFF5722), // สีส้มแดงสื่อถึงของกิน
+      'progress': 0.0,
+      'waypoints': [
+        AppWayPoint(
+          id: 'FOOD_BAR01',
+          name: 'โรงอาหารกลาง 1 (บาร์ใหม่)',
+          latitude: 13.848737,
+          longitude: 100.567161,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR02',
+          name: 'โรงอาหารกลาง 2 (บาร์ใหม่กว่า)',
+          latitude: 13.852037,
+          longitude: 100.571777,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR03',
+          name: 'โรงอาหารคณะวนศาสตร์ (บาร์ไม้)',
+          latitude: 13.845916,
+          longitude: 100.573163,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR04',
+          name: 'โรงอาหารคณะสัตวแพทยศาสตร์ (บาร์หมา)',
+          latitude: 13.843778,
+          longitude: 100.577427,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR05',
+          name: 'อาคารสโมสรนิสิต คณะวิศวกรรมศาสตร์ (โซนบาร์วิศวะ)',
+          latitude: 13.846461,
+          longitude: 100.570156,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR06',
+          name: 'โรงอาหารคณะเทคนิคการสัตวแพทย์',
+          latitude: 13.845954,
+          longitude: 100.576659,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR07',
+          name: 'โรงอาหารภาควิชาคหกรรมศาสตร์',
+          latitude: 13.844225,
+          longitude: 100.570733,
+        ),
+        AppWayPoint(
+          id: 'FOOD_BAR08',
+          name: 'โรงอาหารสวัสดิการ มก. (โซนหอพัก พหลฯ 45)',
+          latitude: 13.853130,
+          longitude: 100.579452,
+        ),
+        AppWayPoint(
+          id: 'FOOD_AVE01',
+          name: 'อาคาร KU Avenue (หลังที่ 1)',
+          latitude: 13.845789,
+          longitude: 100.565406,
+        ),
+        AppWayPoint(
+          id: 'FOOD_AVE02',
+          name: 'อาคาร KU Avenue (หลังที่ 2)',
+          latitude: 13.846130,
+          longitude: 100.564902,
+        ),
+        AppWayPoint(
+          id: 'FOOD_MILK',
+          name: 'อาคารผลิตภัณฑ์นมเกษตร (KU Dairy Processing Plant)',
+          latitude: 13.850846,
+          longitude: 100.571484,
+        ),
+        AppWayPoint(
+          id: 'FOOD_COOP',
+          name: 'อาคารร้านค้าสหกรณ์ มหาวิทยาลัยเกษตรศาสตร์',
+          latitude: 13.845496,
+          longitude: 100.567053,
+        ),
+        AppWayPoint(
+          id: 'FOOD_711_1',
+          name: 'ร้าน 7 eleven บริเวณโรงอาหารกลาง 1 (บาร์ใหม่)',
+          latitude: 13.848938,
+          longitude: 100.566853,
+        ),
+        AppWayPoint(
+          id: 'FOOD_711_2',
+          name: 'ร้าน 7 eleven บริเวณศูนย์เรียนรวม 1 (ศร.1)',
+          latitude: 13.847027,
+          longitude: 100.570643,
+        ),
+        AppWayPoint(
+          id: 'FOOD_711_3',
+          name: 'ร้าน 7 eleven บริเวณศูนย์ผลิตภัณฑ์นม มก.',
+          latitude: 13.850636,
+          longitude: 100.571596,
+        ),
+        AppWayPoint(
+          id: 'FOOD_MINI',
+          name: 'อาคาร KU.MINISHOP 1',
+          latitude: 13.848089,
+          longitude: 100.567092,
+        ),
+        AppWayPoint(
+          id: 'STARBUCKS',
+          name: 'STARBUCKS',
+          latitude: 13.844402,
+          longitude: 100.568894,
+        ),
+        AppWayPoint(
+          id: 'NESCAFÉ',
+          name: 'NESCAFÉ',
+          latitude: 13.848662,
+          longitude: 100.566687,
+        ),
+        AppWayPoint(
+          id: 'Hotto Bun',
+          name: 'Hotto Bun',
+          latitude: 13.85216,
+          longitude: 100.57066,
+        ),
+      ],
+    },
   ];
 }
