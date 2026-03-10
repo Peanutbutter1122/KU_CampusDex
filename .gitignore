@@ -40,7 +40,20 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android Studio will place build artifacts here    
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# ── Secrets (ห้าม commit) ────────────────────────────────
+# Firebase Service Account Key
+*firebase-adminsdk*.json
+ku-campus-dex-*.json
+
+# Mapbox / API keys in gradle.properties
+# (ไฟล์ android/gradle.properties มี MAPBOX_DOWNLOADS_TOKEN)
+android/gradle.properties
+
+# ── node_modules (ไม่จำเป็นต้อง track) ──────────────────
+node_modules/
+package-lock.json
