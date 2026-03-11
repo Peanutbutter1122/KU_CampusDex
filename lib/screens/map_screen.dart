@@ -583,7 +583,7 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  _onMapCreated(MapboxMap mapboxMap) {
+  _onMapCreated(MapboxMap mapboxMap) async {
     this.mapboxMap = mapboxMap;
 
     mapboxMap.compass.updateSettings(
@@ -617,7 +617,16 @@ class _MapScreenState extends State<MapScreen> {
       ),
     );
 
-    if (widget.destination != null) {
+    // Initial fetch of position when map created if not navigating
+    if (widget.destination == null) {
+      try {
+        _currentPosition = await geo.Geolocator.getCurrentPosition(
+          desiredAccuracy: geo.LocationAccuracy.high,
+        );
+      } catch (e) {
+        debugPrint("Error fetching initial position: $e");
+      }
+    } else {
       _startNavigation(widget.destination!);
     }
   }
@@ -640,6 +649,32 @@ class _MapScreenState extends State<MapScreen> {
       );
     } catch (e) {
       debugPrint('3D buildings config error: $e');
+    }
+  }
+
+  Future<void> _moveToCurrentLocation() async {
+    if (mapboxMap == null) return;
+
+    try {
+      final position = await geo.Geolocator.getCurrentPosition(
+        desiredAccuracy: geo.LocationAccuracy.high,
+      );
+      
+      _currentPosition = position;
+
+      mapboxMap!.setCamera(
+        CameraOptions(
+          center: Point(
+            coordinates: Position(
+              position.longitude,
+              position.latitude,
+            ),
+          ),
+          zoom: 17,
+        ),
+      );
+    } catch (e) {
+      debugPrint("Error moving to current location: $e");
     }
   }
 
@@ -667,6 +702,21 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
           ),
+          
+          // My Location Button
+          Positioned(
+            right: 16,
+            bottom: 24, // Fixed position
+            child: FloatingActionButton(
+              heroTag: 'myLocationBtn',
+              onPressed: _moveToCurrentLocation,
+              backgroundColor: Colors.white,
+              foregroundColor: const Color(0xFF358C46),
+              elevation: 4,
+              child: const Icon(Icons.my_location),
+            ),
+          ),
+          
           if (isNavigating)
             SafeArea(
               child: Padding(
