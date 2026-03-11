@@ -47,10 +47,9 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
     setState(() => _isSaving = true);
     try {
-      await FirebaseFirestore.instance.collection('users').doc(user.uid).set(
-        {'displayName': newName},
-        SetOptions(merge: true),
-      );
+      await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+        'displayName': newName,
+      }, SetOptions(merge: true));
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
@@ -102,6 +101,10 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       ),
     );
     if (confirm == true) {
+      // Pop ออกก่อน ให้ MainScreen dispose streams ทั้งหมดก่อนที่ currentUser จะกลายเป็น null
+      if (mounted) {
+        Navigator.of(context).popUntil((route) => route.isFirst);
+      }
       await FirebaseAuth.instance.signOut();
     }
   }
