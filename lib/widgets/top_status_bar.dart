@@ -29,18 +29,27 @@ class _TopStatusBarState extends State<TopStatusBar> {
           .collection('users')
           .doc(user.uid)
           .snapshots()
-          .listen((snap) {
-            if (!mounted) return;
-            if (snap.exists) {
-              final data = snap.data() as Map<String, dynamic>;
-              final placesMap =
-                  data['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {};
-              setState(() {
-                _level = data['level'] ?? 0;
-                _checkedIn = placesMap.length; // ไม่นับซ้ำ (keyed by placeId)
-              });
-            }
-          });
+          .listen(
+            (snap) {
+              if (!mounted) return;
+              if (snap.exists) {
+                final data = snap.data() as Map<String, dynamic>;
+                final placesMap =
+                    data['checked_in_places_map'] as Map<dynamic, dynamic>? ??
+                    {};
+                setState(() {
+                  _level = data['level'] ?? 0;
+                  _checkedIn = placesMap.length;
+                });
+              }
+            },
+            onError: (e) {
+              // Firestore อาจส่ง PERMISSION_DENIED หลัง signOut — จับแล้วเงียบๆ
+              debugPrint('TopStatusBar stream error (likely after logout): $e');
+            },
+            cancelOnError:
+                true, // cancel subscription เมื่อ error เพื่อป้องกัน re-trigger
+          );
     }
   }
 

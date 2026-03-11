@@ -30,7 +30,10 @@ class BadgeScreen extends StatelessWidget {
               stream: FirebaseFirestore.instance
                   .collection('users')
                   .doc(user.uid)
-                  .snapshots(),
+                  .snapshots()
+                  .handleError((e) {
+                    debugPrint('BadgeScreen stream error: $e');
+                  }),
               builder: (context, snapshot) {
                 // รวบรวม place ID ที่ check-in แล้ว
                 Set<String> checkedInIds = {};
@@ -39,7 +42,9 @@ class BadgeScreen extends StatelessWidget {
                 if (snapshot.hasData && snapshot.data!.exists) {
                   final data = snapshot.data!.data() as Map<String, dynamic>;
                   // ใช้ keys ของ map แทน array (ไม่มี duplicate)
-                  final rawMap = data['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {};
+                  final rawMap =
+                      data['checked_in_places_map'] as Map<dynamic, dynamic>? ??
+                      {};
                   checkedInIds = rawMap.keys
                       .map((k) => k.toString())
                       .where((id) => id.isNotEmpty)
@@ -141,7 +146,9 @@ class BadgeScreen extends StatelessWidget {
                             ? badge.color.withOpacity(0.15)
                             : Colors.grey.shade200,
                         border: Border.all(
-                          color: isUnlocked ? badge.color : Colors.grey.shade400,
+                          color: isUnlocked
+                              ? badge.color
+                              : Colors.grey.shade400,
                           width: 3,
                         ),
                       ),
@@ -444,10 +451,7 @@ class _BadgeCard extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               '$done/$total',
-              style: TextStyle(
-                fontSize: 11,
-                color: Colors.grey.shade500,
-              ),
+              style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
             ),
           ] else if (isUnlocked) ...[
             Text(
@@ -463,10 +467,7 @@ class _BadgeCard extends StatelessWidget {
           // Hint to tap
           Text(
             'กดเพื่อดูรายละเอียด',
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey.shade400,
-            ),
+            style: TextStyle(fontSize: 10, color: Colors.grey.shade400),
           ),
         ],
       ),

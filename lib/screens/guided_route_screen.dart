@@ -33,6 +33,10 @@ class GuidedRouteScreen extends StatelessWidget {
                   .collection('users')
                   .doc(FirebaseAuth.instance.currentUser!.uid)
                   .snapshots()
+                  .handleError((e) {
+                    // จับ PERMISSION_DENIED หลัง signOut ไม่ให้ crash
+                    debugPrint('GuidedRouteScreen stream error: $e');
+                  })
             : null,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

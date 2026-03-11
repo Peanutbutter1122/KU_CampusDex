@@ -302,6 +302,10 @@ class _GalleryScreenState extends State<GalleryScreen> {
                     .collection('users')
                     .doc(FirebaseAuth.instance.currentUser!.uid)
                     .snapshots()
+                    .handleError((e) {
+                      // จับ PERMISSION_DENIED หลัง signOut ไม่ให้ crash
+                      debugPrint('GalleryScreen stream error: $e');
+                    })
               : null,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -315,7 +319,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
               final data = snapshot.data!.data() as Map<String, dynamic>;
               level = data['level'] ?? 0;
               // อ่านจาก Map (key = placeId) เพื่อป้องกัน entry ซ้ำ
-              final rawMap = data['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {};
+              final rawMap =
+                  data['checked_in_places_map'] as Map<dynamic, dynamic>? ?? {};
               checkedInPlaces = rawMap.values
                   .whereType<Map<String, dynamic>>()
                   .toList()
@@ -420,7 +425,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
                                           left: 10,
                                           right: 10,
                                           top: 8,
-                                          bottom: 12, // เพิ่มจาก 8 → 12 เพื่อไม่ให้ตัวเลขจม
+                                          bottom:
+                                              12, // เพิ่มจาก 8 → 12 เพื่อไม่ให้ตัวเลขจม
                                         ),
                                         decoration: BoxDecoration(
                                           gradient: LinearGradient(

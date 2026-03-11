@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:final_project/login_page.dart';
 
 class AccountSettingsScreen extends StatefulWidget {
   const AccountSettingsScreen({super.key});
@@ -101,11 +102,18 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       ),
     );
     if (confirm == true) {
-      // Pop ออกก่อน ให้ MainScreen dispose streams ทั้งหมดก่อนที่ currentUser จะกลายเป็น null
-      if (mounted) {
-        Navigator.of(context).popUntil((route) => route.isFirst);
+      try {
+        await FirebaseAuth.instance.signOut();
+      } catch (e) {
+        debugPrint('Logout error: $e');
       }
-      await FirebaseAuth.instance.signOut();
+      // ล้าง navigation stack ทั้งหมด แล้วไปหน้า Login โดยตรง
+      if (mounted) {
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (_) => LoginPage()),
+          (route) => false, // ลบทุก route ออกหมด
+        );
+      }
     }
   }
 
