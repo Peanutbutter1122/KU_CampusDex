@@ -275,9 +275,7 @@ class _MapScreenState extends State<MapScreen> {
     // Open camera
     final String? photoPath = await Navigator.push<String>(
       context,
-      MaterialPageRoute(
-        builder: (_) => CameraScreen(locationId: dest.id),
-      ),
+      MaterialPageRoute(builder: (_) => CameraScreen(locationId: dest.id)),
     );
 
     if (photoPath == null) return; // User cancelled
@@ -321,7 +319,9 @@ class _MapScreenState extends State<MapScreen> {
       // ── ใช้ map keyed by place ID เพื่อป้องกัน duplicate ──────────────────
       // checked_in_places_map: { "FOOD_BAR01": { name, checkin_time, photo_url }, ... }
       // การ check-in ซ้ำจะ update รูปและเวลาใหม่ แต่ไม่เพิ่ม entry ซ้ำ
-      final userRef = FirebaseFirestore.instance.collection('users').doc(user.uid);
+      final userRef = FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid);
 
       final docSnap = await userRef.get();
       final existing = docSnap.data() ?? {};
@@ -351,8 +351,10 @@ class _MapScreenState extends State<MapScreen> {
         existing['unlocked_badges'] as List<dynamic>? ?? [],
       );
 
-      final List<String> nowUnlocked =
-          AppBadge.evaluateUnlockedIds(allCheckedIds, BadgeData.all);
+      final List<String> nowUnlocked = AppBadge.evaluateUnlockedIds(
+        allCheckedIds,
+        BadgeData.all,
+      );
 
       final List<String> newlyUnlocked = nowUnlocked
           .where((id) => !alreadyUnlocked.contains(id))
@@ -549,10 +551,7 @@ class _MapScreenState extends State<MapScreen> {
               Text(
                 badge.description,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 13,
-                  color: Color(0xFF3B2213),
-                ),
+                style: const TextStyle(fontSize: 13, color: Color(0xFF3B2213)),
               ),
               const SizedBox(height: 20),
               SizedBox(
@@ -587,7 +586,12 @@ class _MapScreenState extends State<MapScreen> {
     this.mapboxMap = mapboxMap;
 
     mapboxMap.compass.updateSettings(
-      CompassSettings(marginTop: 100, marginRight: 20),
+      CompassSettings(
+        marginTop:
+            MediaQuery.of(context).size.height -
+            230, // ดันลงมาข้างล่าง (เหนือปุ่ม GPS เล็กน้อย)
+        marginRight: 20,
+      ),
     );
     mapboxMap.scaleBar.updateSettings(ScaleBarSettings(enabled: false));
 
@@ -659,16 +663,13 @@ class _MapScreenState extends State<MapScreen> {
       final position = await geo.Geolocator.getCurrentPosition(
         desiredAccuracy: geo.LocationAccuracy.high,
       );
-      
+
       _currentPosition = position;
 
       mapboxMap!.setCamera(
         CameraOptions(
           center: Point(
-            coordinates: Position(
-              position.longitude,
-              position.latitude,
-            ),
+            coordinates: Position(position.longitude, position.latitude),
           ),
           zoom: 17,
         ),
@@ -702,7 +703,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
           ),
-          
+
           // My Location Button
           Positioned(
             right: 16,
@@ -716,7 +717,7 @@ class _MapScreenState extends State<MapScreen> {
               child: const Icon(Icons.my_location),
             ),
           ),
-          
+
           if (isNavigating)
             SafeArea(
               child: Padding(
