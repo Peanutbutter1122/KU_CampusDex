@@ -12,7 +12,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'อาคารเทพรัตน์วิทยโชติ',
     'subtitle': 'สำนักหอสมุด · จุดนัดหมายตากแอร์',
     'url':
-        'https://images.unsplash.com/photo-1568228189815-1a2f641a029c?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fhor_samud.jpg?alt=media&token=2659760d-0e20-4e63-8f8d-132967b4b5fb',
     'waypoint': const AppWayPoint(
       id: 'LIB01',
       name: 'อาคารเทพรัตน์วิทยโชติ (อาคารการเรียนรู้)',
@@ -23,7 +23,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'อาคารเทพรัตน์วิทยโชติ',
       subtitle: 'สำนักหอสมุด · จุดนัดหมายตากแอร์',
       category: '📚 ห้องสมุด',
-      imageUrl: 'https://images.unsplash.com/photo-1568228189815-1a2f641a029c?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fhor_samud.jpg?alt=media&token=2659760d-0e20-4e63-8f8d-132967b4b5fb',
       description: 'อาคารเทพรัตน์วิทยโชติ หรือ "สำนักหอสมุด" เป็นห้องสมุดกลางของมหาวิทยาลัยเกษตรศาสตร์ มีพื้นที่อ่านหนังสือ โซนทำงานกลุ่ม และอินเทอร์เน็ตฟรีสำหรับนิสิต เป็นจุดนัดพบยอดฮิตสำหรับนิสิตที่อยากตากแอร์ระหว่างพักกิจกรรม',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 08:30 - 20:00 น.\nเสาร์ - อาทิตย์: 09:00 - 18:00 น.'},
@@ -36,7 +36,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'บาร์ใหม่ (โรงอาหารกลาง 1)',
     'subtitle': 'ศูนย์รวมของกินที่ใหญ่ที่สุด',
     'url':
-        'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbar_mai.jpg?alt=media&token=7113001c-3bfd-4ee4-b599-9de23c2d5c14',
     'waypoint': const AppWayPoint(
       id: 'FOOD_BAR01',
       name: 'โรงอาหารกลาง 1 (บาร์ใหม่)',
@@ -47,7 +47,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'บาร์ใหม่ (โรงอาหารกลาง 1)',
       subtitle: 'ศูนย์รวมของกินที่ใหญ่ที่สุดใน มก.',
       category: '🍽️ โรงอาหาร',
-      imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbar_mai.jpg?alt=media&token=7113001c-3bfd-4ee4-b599-9de23c2d5c14',
       description: 'โรงอาหารกลาง 1 หรือที่เรียกกันว่า "บาร์ใหม่" เป็นโรงอาหารที่ใหญ่ที่สุดในมหาวิทยาลัยเกษตรศาสตร์ มีร้านอาหารและเมนูให้เลือกมากมาย ทั้งอาหารไทย ข้าวราดแกง ก๋วยเตี๋ยว และอาหารจานด่วน เป็นจุดนัดหมายยอดฮิตของนิสิตในช่วงพักกลางวัน',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 07:00 - 18:00 น.'},
@@ -60,7 +60,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'บาร์ใหม่กว่า (โรงอาหารกลาง 2)',
     'subtitle': 'อีกหนึ่งจุดที่คนเยอะไม่แพ้กัน',
     'url':
-        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbar_mai_kwa.jpg?alt=media&token=2ff8a0be-9509-4db0-8906-308046cf8856',
     'waypoint': const AppWayPoint(
       id: 'FOOD_BAR02',
       name: 'โรงอาหารกลาง 2 (บาร์ใหม่กว่า)',
@@ -71,7 +71,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'บาร์ใหม่กว่า (โรงอาหารกลาง 2)',
       subtitle: 'อีกหนึ่งจุดที่คนเยอะไม่แพ้กัน',
       category: '🍽️ โรงอาหาร',
-      imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbar_mai_kwa.jpg?alt=media&token=2ff8a0be-9509-4db0-8906-308046cf8856',
       description: 'โรงอาหารกลาง 2 หรือ "บาร์ใหม่กว่า" เป็นโรงอาหารใหม่ที่มีบรรยากาศทันสมัยกว่า ตั้งอยู่บริเวณแถวหอพัก มีเมนูหลากหลายทั้งข้าวแกง ก๋วยเตี๋ยว และเมนูฟิวชั่น เป็นที่นิยมในหมู่นิสิตชั้นปีที่พักในหอ',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 07:00 - 19:00 น.'},
@@ -84,7 +84,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'หอประชุมใหญ่ มก.',
     'subtitle': 'จุดถ่ายรูปรับปริญญายอดฮิต',
     'url':
-        'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbig_hor_prachum.jpg?alt=media&token=0f65cb52-b24c-4b39-90e5-918c397579b3',
     'waypoint': const AppWayPoint(
       id: 'CEN_ADM02',
       name: 'หอประชุมใหญ่ มก.',
@@ -96,7 +96,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'หอประชุมใหญ่ มก.',
       subtitle: 'จุดถ่ายรูปรับปริญญายอดฮิต',
       category: '🏛️ สถานที่สำคัญ',
-      imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fbig_hor_prachum.jpg?alt=media&token=0f65cb52-b24c-4b39-90e5-918c397579b3',
       description: 'หอประชุมใหญ่มหาวิทยาลัยเกษตรศาสตร์ เป็นสถานที่จัดพิธีพระราชทานปริญญาบัตร และงานสำคัญต่างๆ ของมหาวิทยาลัย ด้านหน้ามีต้นนนทรีซึ่งเป็นสัญลักษณ์ของมหาวิทยาลัย และพระพิรุณทรงนาค ซึ่งเป็นจุดถ่ายภาพที่นิสิตนิยมมากที่สุด',
       details: [
         {'icon': Icons.history, 'title': 'ความสำคัญ', 'subtitle': 'สถานที่พระราชทานปริญญาบัตรและงานสำคัญของ มก.'},
@@ -109,7 +109,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'KU Avenue',
     'subtitle': 'ร้านค้าและร้านอาหารหลากหลาย',
     'url':
-        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fku_avanue.jpg?alt=media&token=02675070-6e66-4a03-b98a-310c282afa83',
     'waypoint': const AppWayPoint(
       id: 'FOOD_AVE01',
       name: 'อาคาร KU Avenue (หลังที่ 1)',
@@ -120,7 +120,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'KU Avenue',
       subtitle: 'ร้านค้าและร้านอาหารหลากหลายสไตล์',
       category: '🛍️ ช้อปปิ้ง & อาหาร',
-      imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fku_avanue.jpg?alt=media&token=02675070-6e66-4a03-b98a-310c282afa83',
       description: 'KU Avenue เป็นอาคารร้านค้ารูปแบบใหม่ มีร้านอาหาร คาเฟ่ และร้านค้าหลากหลายรูปแบบ จัดเป็น lifestyle hub สำหรับนิสิตและบุคลากร มีบรรยากาศสบายๆ เหมาะสำหรับนั่งพักผ่อนและสังสรรค์',
       details: [
         {'icon': Icons.store, 'title': 'ร้านค้า', 'subtitle': 'ร้านอาหาร, คาเฟ่, เบเกอรี่, ของฝาก'},
@@ -133,7 +133,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'Hotto Bun',
     'subtitle': 'ขนมปังอบร้อนๆ ยอดฮิตของเด็กเกษตร',
     'url':
-        'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fhotto_bun.jpg?alt=media&token=0bc6c58a-71ea-42b4-9bc5-47fb79e76ced',
     'waypoint': const AppWayPoint(
       id: 'FOOD_AVE02',
       name: 'อาคาร KU Avenue (หลังที่ 2)',
@@ -144,7 +144,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'Hotto Bun',
       subtitle: 'ขนมปังอบร้อนๆ ยอดฮิตของเด็กเกษตร',
       category: '🥐 เบเกอรี่',
-      imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fhotto_bun.jpg?alt=media&token=0bc6c58a-71ea-42b4-9bc5-47fb79e76ced',
       description: 'Hotto Bun ร้านขนมปังและเบเกอรี่ยอดนิยมในมหาวิทยาลัยเกษตรศาสตร์ ขึ้นชื่อด้านขนมปังอบร้อนๆ และเมนูเครื่องดื่มหลากหลาย กลายเป็นจุดแวะพักฮิตสำหรับนิสิตก่อนเข้าเรียน',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 07:00 - 17:00 น.'},
@@ -157,7 +157,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'STARBUCKS (สารนิเทศ 50 ปี)',
     'subtitle': 'คาเฟ่ที่นิสิตชื่นชอบ',
     'url':
-        'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fstarbuck.jpg?alt=media&token=8dfd8b80-3365-4153-86a1-1af54e076173',
     'waypoint': const AppWayPoint(
       id: 'STARBUCKS',
       name: 'STARBUCKS',
@@ -168,7 +168,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'STARBUCKS (สารนิเทศ 50 ปี)',
       subtitle: 'คาเฟ่ระดับพรีเมียมใจกลาง มก.',
       category: '☕ คาเฟ่',
-      imageUrl: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fstarbuck.jpg?alt=media&token=8dfd8b80-3365-4153-86a1-1af54e076173',
       description: 'Starbucks สาขามหาวิทยาลัยเกษตรศาสตร์ ตั้งอยู่บริเวณอาคารสารนิเทศ 50 ปี เป็นที่นิยมสำหรับนิสิตและอาจารย์ที่ต้องการพักผ่อนและทำงาน ด้วยบรรยากาศสบายและมี WiFi รองรับ',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'ทุกวัน 07:00 - 21:00 น.'},
@@ -181,7 +181,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'STARBUCKS (KU Science)',
     'subtitle': 'สตาร์บัคส์ฝั่งคณะวิทยาศาสตร์',
     'url':
-        'https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fstarbuck_science.jpg?alt=media&token=712ed8fa-2136-4f2c-8859-1c4648a698f6',
     'waypoint': const AppWayPoint(
       id: 'STARBUCKS_SCI',
       name: 'STARBUCKS (Kasetsart Science)',
@@ -192,7 +192,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'STARBUCKS (KU Science)',
       subtitle: 'สตาร์บัคส์ฝั่งคณะวิทยาศาสตร์',
       category: '☕ คาเฟ่',
-      imageUrl: 'https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fstarbuck_science.jpg?alt=media&token=712ed8fa-2136-4f2c-8859-1c4648a698f6',
       description: 'Starbucks Kasetsart Science ตั้งอยู่บริเวณคณะวิทยาศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ เป็นอีกหนึ่งสาขาที่ได้รับความนิยมจากนิสิตคณะวิทยาศาสตร์และคณะใกล้เคียง บรรยากาศเงียบสงบเหมาะแก่การอ่านหนังสือ',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'ทุกวัน 07:00 - 20:00 น.'},
@@ -205,7 +205,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'NESCAFÉ',
     'subtitle': 'กาแฟสดใกล้มือ ราคาเป็นมิตร',
     'url':
-        'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fnescafe.jpg?alt=media&token=ac959a28-81b3-4107-afc8-ae26aa5f08b3',
     'waypoint': const AppWayPoint(
       id: 'NESCAFÉ',
       name: 'NESCAFÉ',
@@ -216,7 +216,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'NESCAFÉ',
       subtitle: 'กาแฟสดใกล้มือ ราคาเป็นมิตร',
       category: '☕ คาเฟ่',
-      imageUrl: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Fnescafe.jpg?alt=media&token=ac959a28-81b3-4107-afc8-ae26aa5f08b3',
       description: 'ร้าน NESCAFÉ ใน มก. เป็นทางเลือกกาแฟที่ราคาย่อมเยาสำหรับนิสิต มีทั้งกาแฟร้อน กาแฟเย็น และเครื่องดื่มอื่นๆ ตั้งอยู่ใกล้โรงอาหารกลาง สะดวกสำหรับแวะซื้อก่อนเข้าเรียน',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 07:00 - 17:00 น.'},
@@ -229,7 +229,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
     'title': 'อาคารระพีสาคริก',
     'subtitle': 'Study Hub ยอดนิยมของนิสิต มก.',
     'url':
-        'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80',
+        'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Frapee.jpg?alt=media&token=cf996362-4487-4f5f-b6cf-bf6a4053beb3',
     'waypoint': const AppWayPoint(
       id: 'CEN_ADM04',
       name: 'อาคารระพีสาคริก',
@@ -240,7 +240,7 @@ final List<Map<String, dynamic>> _featuredPlaces = [
       title: 'อาคารระพีสาคริก',
       subtitle: 'Study Hub ยอดนิยมของนิสิต มก.',
       category: '📍 Study Spot',
-      imageUrl: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80',
+      imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ku-campus-dex.firebasestorage.app/o/homelanding%2Frapee.jpg?alt=media&token=cf996362-4487-4f5f-b6cf-bf6a4053beb3',
       description: 'อาคารระพีสาคริก เป็นหอสมุดและศูนย์บริการข้อมูลข่าวสารสำหรับการศึกษาและค้นคว้าวิจัย มีพื้นที่สำหรับอ่านหนังสือ ทำงานกลุ่ม และคอมพิวเตอร์ไว้บริการนิสิต ซึ่งมักเป็นที่นัดหมายยอดฮิตของนิสิตทุกชั้นปี',
       details: [
         {'icon': Icons.schedule, 'title': 'เวลาทำการ', 'subtitle': 'จันทร์ - ศุกร์: 08:30 - 20:00 น.\nเสาร์ - อาทิตย์: 09:00 - 18:00 น.'},

@@ -71,10 +71,27 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  /// อัปเดตตำแหน่งเข็มทิศให้ลอยเหนือปุ่ม GPS
+  /// ตอน navigate จะขยับขึ้นให้พ้น BottomNavBar
+  void _updateCompassPosition({required bool isNavigating}) {
+    mapboxMap?.compass.updateSettings(
+      CompassSettings(
+        position: OrnamentPosition.BOTTOM_RIGHT,
+        marginBottom: isNavigating
+            ? 230
+            : 80, // เหนือปุ่ม GPS (และเหนือ nav bar ตอน navigate)
+        marginRight: 16,
+      ),
+    );
+  }
+
   @override
   void didUpdateWidget(MapScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.destination != oldWidget.destination) {
+      // ขยับเข็มทิศขึ้น/ลงตาม navigation state
+      _updateCompassPosition(isNavigating: widget.destination != null);
+
       if (widget.destination != null) {
         // รีเซ็ต flag เพื่อให้ _startNavigation เรียกได้กับปลายทางใหม่
         _navigationStarted = false;
@@ -585,14 +602,7 @@ class _MapScreenState extends State<MapScreen> {
   _onMapCreated(MapboxMap mapboxMap) async {
     this.mapboxMap = mapboxMap;
 
-    mapboxMap.compass.updateSettings(
-      CompassSettings(
-        marginTop:
-            MediaQuery.of(context).size.height -
-            230, // ดันลงมาข้างล่าง (เหนือปุ่ม GPS เล็กน้อย)
-        marginRight: 20,
-      ),
-    );
+    _updateCompassPosition(isNavigating: widget.destination != null);
     mapboxMap.scaleBar.updateSettings(ScaleBarSettings(enabled: false));
 
     _updateMapStyle();
@@ -704,10 +714,12 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
 
-          // My Location Button
+          // My Location Button — ขยับขึ้นเมื่อ Guided Route bar โผล่
           Positioned(
             right: 16,
-            bottom: 24, // Fixed position
+            bottom: isNavigating
+                ? 170
+                : 24, // เพิ่ม bottom ตอน navigate เพื่อให้พ้น BottomNavBar
             child: FloatingActionButton(
               heroTag: 'myLocationBtn',
               onPressed: _moveToCurrentLocation,
